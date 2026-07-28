@@ -1,6 +1,6 @@
 baseURL = "https://Dichtoria.github.io/smart-parking-workshop/"
-relativeURLs = false
-canonifyURLs = false
+relativeURLs = true
+canonifyURLs = true
 defaultContentLanguage = "en"
 
 # Change the default theme to be use when building the site with Hugo
@@ -23,7 +23,7 @@ home = [ "HTML", "RSS", "JSON"]
   
 [Languages]
 [Languages.en]
-title = "Smart Parking System Workshop"
+title = "Internship Report"
 weight = 1
 languageName = "English"
 
@@ -40,7 +40,7 @@ url = "https://www.facebook.com/groups/awsstudygroupfcj"
 weight = 20
 
 [Languages.vi]
-title = "Workshop hệ thống bãi đỗ xe thông minh"
+title = "Báo cáo thực tập"
 weight = 2
 languageName = "Tiếng Việt"
 
