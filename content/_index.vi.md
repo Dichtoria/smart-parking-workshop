@@ -7,25 +7,25 @@ chapter: false
 
 # Báo cáo thực tập
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Nguyễn Văn A
+&emsp; **Họ và tên:** Nguyễn Triệu Yến Nhi
 
-&emsp; **Số điện thoại:** 0989888999
+&emsp; **Số điện thoại:** 0937306625
 
-&emsp; **Email:** Anguyenvan@gmail.com
+&emsp; **Email:** trieuyennhi1972@gmail.com
 
-&emsp; **Trường:** Đại học Sư phạm Kỹ thuật TP.HCM
+&emsp; **Trường:** FPT University
 
-&emsp; **Ngành:** Công nghệ thông tin
+&emsp; **Ngành:** Trí Tuệ Nhân Tạo
 
-&emsp; **Lớp:** AWS082025
+&emsp; **ID:** SE194561
 
 &emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Viet Nam
 
 &emsp; **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Thời gian thực tập:** Từ ngày 12/08/2025 đến ngày 12/11/2025
+&emsp; **Thời gian thực tập:** Từ ngày 26/05/2026 đến ngày 11/08/2026
 
-![Ảnh đại diện của bạn](/images/avatar.png)
+![Ảnh đại diện của bạn](/images/avatar.jpg)
 
 
 
