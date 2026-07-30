@@ -10,7 +10,7 @@ pre: " <b> 3.3. </b> "
 
 This article explores end-to-end workflows for building, training, and integrating Artificial Intelligence (AI) and Machine Learning (ML) capabilities into applications using AWS AI/ML services and Amazon SageMaker.
 
-![Post3](/images/3-BlogsPosted/3.png)
+![Post3](/images/3-BlogsPosted/3.jpeg)
 
 
 Key points to know:
