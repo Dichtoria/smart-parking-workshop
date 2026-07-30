@@ -10,7 +10,7 @@ pre: " <b> 3.1. </b> "
 
 Bài viết tìm hiểu giải pháp khắc phục sự cố (Disaster Recovery - DR) trên đám mây AWS nhằm đảm bảo hai chỉ số sống còn là RTO (Recovery Time Objective) và RPO (Recovery Point Objective) thấp nhất cho hệ thống doanh nghiệp qua việc kết hợp AWS Elastic Disaster Recovery (AWS DRS) và AWS Transit Gateway.
 
-![Post1](images/3-BlogsPosted/1.png)
+![Post1](/images/3-BlogsPosted/1.jpeg)
 
 Các điểm chính cần nắm:
 

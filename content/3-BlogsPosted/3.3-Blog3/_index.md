@@ -12,7 +12,6 @@ This article explores end-to-end workflows for building, training, and integrati
 
 ![Post3](/images/3-BlogsPosted/3.jpeg)
 
-
 Key points to know:
 
 * **Layered AI/ML Ecosystem**: Leverage pre-trained Managed AI Services via simple API calls or utilize Amazon SageMaker for custom end-to-end ML model development.

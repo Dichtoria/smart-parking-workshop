@@ -10,6 +10,8 @@ pre: " <b> 3.2. </b> "
 
 This article shares hands-on experience utilizing **Amazon EventBridge Scheduler** to automate time-based tasks on AWS without managing traditional server-based Cron Jobs.
 
+![Post2](/images/3-BlogsPosted/2.jpeg)
+
 Key points to know:
 
 * **Serverless Execution**: Completely eliminates the need to run EC2 instances solely for Cron Jobs, reducing operational overhead and server maintenance costs.

@@ -10,6 +10,8 @@ pre: " <b> 3.2. </b> "
 
 Bài viết chia sẻ trải nghiệm sử dụng **Amazon EventBridge Scheduler** để tự động hóa các tác vụ lập lịch theo thời gian trên AWS mà không cần khởi tạo hay quản lý máy chủ Cron Job thủ công.
 
+![Post2](/images/3-BlogsPosted/2.jpeg)
+
 Các điểm chính cần nắm:
 
 * **Không cần duy trì máy chủ (Serverless)**: Thay thế hoàn toàn việc tạo EC2 chỉ để chạy Cron Job, giúp tiết kiệm chi phí vận hành và không tốn công quản trị server.

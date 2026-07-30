@@ -10,6 +10,8 @@ pre: " <b> 3.3. </b> "
 
 Bài viết khám phá quy trình xây dựng, huấn luyện và tích hợp các mô hình Trí tuệ nhân tạo (AI) và Học máy (Machine Learning) vào ứng dụng bằng hệ sinh thái dịch vụ AWS AI/ML và nền tảng Amazon SageMaker.
 
+![Post3](/images/3-BlogsPosted/3.jpeg)
+
 Các điểm chính cần nắm:
 
 * **Phân tầng dịch vụ AI/ML linh hoạt**: Tận dụng các Managed AI Services tích hợp qua API dựng sẵn hoặc dùng Amazon SageMaker cho quy trình xây dựng mô hình tùy chỉnh end-to-end.

@@ -10,6 +10,8 @@ pre: " <b> 3.1. </b> "
 
 This article explores cloud Disaster Recovery (DR) solutions on AWS designed to minimize critical RTO (Recovery Time Objective) and RPO (Recovery Point Objective) metrics for enterprise systems by combining AWS Elastic Disaster Recovery (AWS DRS) and AWS Transit Gateway.
 
+![Post1](/images/3-BlogsPosted/1.jpeg)
+
 Key points to know:
 
 * **AWS Elastic Disaster Recovery (AWS DRS)** enables continuous block-level replication of physical or virtual servers from On-Premises or cross-region environments at optimal storage costs.
