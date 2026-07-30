@@ -1,55 +1,28 @@
 ---
 title: "Worklog Tuần 3"
 date: 2024-01-01
-weight: 1
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
 
 ### Mục tiêu tuần 3:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu dịch vụ Cơ sở dữ liệu quan hệ quản trị Amazon Relational Database Service (Amazon RDS).
+* Khởi tạo, cấu hình chuỗi hạ tầng CSDL PostgreSQL/MySQL, cấu hình DB Subnet Groups, Security Groups và các chiến lược sao lưu dữ liệu DB Snapshots.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 09/06/2026   | 09/06/2026      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 10/06/2026   | 10/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 11/06/2026   | 11/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 12/06/2026   | 12/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 13/06/2026   | 13/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Tổng quan về dịch vụ Amazon RDS: Phân biệt tự quản trị CSDL trên EC2 vs Amazon RDS managed service <br>- Tìm hiểu các Database Engines được hỗ trợ: PostgreSQL, MySQL, MariaDB, Oracle, SQL Server | 09/06/2026 | 09/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - Nghiên cứu kiến trúc độ sẵn sàng cao Multi-AZ Deployment (Primary & Standby Replica) <br>- Khái niệm Read Replicas tối ưu hiệu năng đọc cho CSDL quan hệ | 10/06/2026 | 10/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - **Thực hành Amazon RDS:** <br>&emsp; + Tạo DB Subnet Group liên kết các Subnet riêng tư (Private Subnets) <br>&emsp; + Khởi tạo Amazon RDS PostgreSQL instance trong Private Subnet | 11/06/2026 | 11/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Cấu hình VPC Security Group cho RDS instance: Khóa chặt cổng 5432, chỉ cho phép kết nối từ Security Group của EC2/Application layer <br>- Kết nối thử nghiệm từ máy chủ EC2 tới RDS Database | 12/06/2026 | 12/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - Tìm hiểu chiến lược sao lưu: Automated Backups & Manual DB Snapshots <br>- **Thực hành:** Tạo Manual Snapshot, khôi phục CSDL từ Snapshot và thực hiện sao chép snapshot | 13/06/2026 | 13/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 3:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Thấu hiểu kiến trúc CSDL đám mây Amazon RDS và mô hình triển khai Multi-AZ đảm bảo tính sẵn sàng cao.
+* Khởi tạo thành công cụm Cơ sở dữ liệu Amazon RDS PostgreSQL nằm an toàn trong Private Subnet.
+* Thiết lập tường lửa Security Groups bảo vệ CSDL chỉ nhận kết nối nội bộ từ tầng ứng dụng.
+* Nắm vững quy trình tự động hóa sao lưu và khôi phục dữ liệu an toàn bằng DB Snapshots.

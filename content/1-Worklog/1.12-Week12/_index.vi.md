@@ -1,54 +1,28 @@
 ---
 title: "Worklog Tuần 12"
 date: 2024-01-01
-weight: 2
+weight: 12
 chapter: false
-pre: " <b> 1.12 </b> "
+pre: " <b> 1.12. </b> "
 ---
+
 ### Mục tiêu tuần 12:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nghiên cứu mở rộng các dịch vụ Trí tuệ nhân tạo & Học máy (AI/ML) với Amazon SageMaker, tự động hóa quy trình với AWS Step Functions và tối ưu hóa chi phí (Cost Optimization).
+* Tổng kết toàn bộ kết quả thực tập, hoàn thiện các chương báo cáo và nghiệm thu kỳ thực tập tại AWS Việt Nam.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2026   | 11/08/2026      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2026   | 12/08/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2026   | 13/08/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2026   | 14/08/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2026   | 15/08/2026      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Tổng quan về Machine Learning trên AWS: Giới thiệu Amazon SageMaker Studio, Jupyter Notebooks & quy trình huấn luyện mô hình | 11/08/2026 | 11/08/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - Tìm hiểu dịch vụ tự động hóa quy trình nghiệp vụ AWS Step Functions: Xây dựng State Machines liên kết các AWS services | 12/08/2026 | 12/08/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - Đánh giá & thực hành Tối ưu hóa chi phí (Cost Optimization): AWS Cost Explorer, Savings Plans, Reserved Instances & AWS Compute Optimizer | 13/08/2026 | 13/08/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Tổng hợp toàn bộ kết quả thực tập 12 tuần, kiểm tra lại toàn bộ file báo cáoHugo (Worklog, Proposal, Blogs, Events, Self-evaluation) | 14/08/2026 | 14/08/2026 | |
+| 6 | - Báo cáo nghiệm thu kỳ thực tập thành công cùng Mentor và ban quản lý chương trình First Cloud AI Journey (FCAJ) | 15/08/2026 | 15/08/2026 | |
 
 ### Kết quả đạt được tuần 12:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Nắm bắt bức tranh tổng quan về hệ sinh thái AI/ML Amazon SageMaker và tự động hóa quy trình làm việc với AWS Step Functions.
+* Nắm vững các công cụ và chiến lược tối ưu hóa chi phí điện toán đám mây cho doanh nghiệp.
+* Hoàn thiện 100% nội dung báo cáo thực tập trên website Hugo theo đúng quy chuẩn.
+* Bảo vệ và nghiệm thu thành công kết quả kỳ thực tập 12 tuần tại AWS Việt Nam.

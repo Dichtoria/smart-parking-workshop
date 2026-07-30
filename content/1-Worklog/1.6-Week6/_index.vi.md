@@ -1,54 +1,28 @@
 ---
 title: "Worklog Tuần 6"
 date: 2024-01-01
-weight: 1
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
 
 ### Mục tiêu tuần 6:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu mạng phân phối nội dung toàn cầu Amazon CloudFront (Content Delivery Network - CDN).
+* Tối ưu hóa hiệu năng, giảm độ trễ truy cập, tích hợp chứng chỉ SSL/TLS (ACM) và thiết lập bảo vệ ứng dụng web.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 30/06/2026   | 30/06/2026      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 01/07/2026   | 01/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 02/07/2026   | 02/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 03/07/2026   | 03/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 04/07/2026   | 04/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Tìm hiểu tổng quan Amazon CloudFront: Khái niệm CDN, Edge Locations, Regional Edge Caches <br>- Phân biệt các loại Nguồn (Origins): S3 Bucket, ECS Service Domain/IP hoặc Custom Origin | 30/06/2026 | 30/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - Tìm hiểu cơ chế Caching Behaviors, TTL (Time-To-Live), Query String & Header forwarding <br>- **Thực hành:** Tạo CloudFront Distribution trỏ đến S3 Bucket chứa website tĩnh | 01/07/2026 | 01/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - Tăng cường bảo mật S3 Origin bằng Origin Access Control (OAC) / Origin Access Identity (OAI) nhằm ngăn chặn truy cập trực tiếp vào S3 | 02/07/2026 | 02/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Cấu hình tên miền tùy chỉnh (Custom Domain) kết hợp chứng chỉ HTTPS miễn phí từ AWS Certificate Manager (ACM) <br>- Tìm hiểu lệnh xóa cache CloudFront Invalidation | 03/07/2026 | 03/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - **Thực hành:** <br>&emsp; + Tạo CloudFront Distribution trỏ nguồn trực tiếp về cụm ứng dụng ECS Fargate <br>&emsp; + Thực hiện gửi lệnh Create Invalidation và kiểm tra tốc độ tải trang toàn cầu qua Edge Location | 04/07/2026 | 04/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Thấu hiểu nguyên lý hoạt động của mạng phân phối nội dung toàn cầu Amazon CloudFront CDN.
+* Triển khai thành công CloudFront Distribution giúp tăng tốc đáng kể tốc độ phản hồi cho trang web.
+* Khóa an toàn S3 Bucket Origin bằng OAC, chỉ cho phép truy cập duy nhất thông qua CloudFront CDN.
+* Nắm vững quy trình cấu hình chứng chỉ bảo mật HTTPS (SSL/TLS) và lệnh xóa bộ nhớ đệm CloudFront Invalidation.

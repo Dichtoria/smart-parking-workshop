@@ -1,55 +1,28 @@
 ---
 title: "Worklog Tuần 4"
 date: 2024-01-01
-weight: 1
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
 
 ### Mục tiêu tuần 4:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nắm vững kỹ thuật đóng gói ứng dụng bằng Docker Container và quản lý kho chứa ảnh riêng tư trên Amazon ECR (Elastic Container Registry).
+* Xây dựng Docker Image nhẹ, tối ưu và thực hiện quy trình đăng nhập/push/pull container image lên Amazon ECR.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 16/06/2026   | 16/06/2026      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 17/06/2026   | 17/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 18/06/2026   | 18/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 19/06/2026   | 19/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 20/06/2026   | 20/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Tìm hiểu tổng quan công nghệ Containerization vs Virtual Machines (VMs) <br>- Cài đặt Docker Engine, tìm hiểu kiến trúc Docker Daemon, Client & Image Layers | 16/06/2026 | 16/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - Tìm hiểu cú pháp viết `Dockerfile` (FROM, WORKDIR, COPY, RUN, EXPOSE, CMD/ENTRYPOINT) <br>- **Thực hành:** Viết Dockerfile đóng gói ứng dụng Web Node.js / Python và build Docker Image | 17/06/2026 | 17/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - Tìm hiểu dịch vụ lưu trữ container Amazon Elastic Container Registry (ECR): Repositories, Image Tags, Image Scanning & IAM Authorization Tokens | 18/06/2026 | 18/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - **Thực hành Amazon ECR:** <br>&emsp; + Tạo Private ECR Repository trên AWS Management Console <br>&emsp; + Sử dụng AWS CLI đăng nhập xác thực `aws ecr get-login-password` | 19/06/2026 | 19/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - **Thực hành:** Gắn tag (`docker tag`) và push Docker Image thành công lên Amazon ECR, kiểm tra tính năng quét lỗ hổng bảo mật Image Vulnerability Scanning | 20/06/2026 | 20/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 4:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Thành thạo quy trình đóng gói ứng dụng web vào container bằng Dockerfile chuẩn tối ưu dung lượng.
+* Khởi tạo và quản lý kho lưu trữ container riêng tư trên Amazon ECR.
+* Xác thực thành công giữa Docker CLI cục bộ và dịch vụ AWS ECR thông qua AWS CLI token.
+* Tải (push) và quản lý phiên bản container image an toàn trên kho lưu trữ đám mây Amazon ECR.

@@ -1,53 +1,28 @@
 ---
-title: "Week 9 Worklog"
+title: "Worklog Week 9"
 date: 2024-01-01
-weight: 1
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
 
 ### Week 9 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Complete project peak execution phase (Phase 2): Define and orchestrate containerized application clusters on AWS Fargate.
+* Accelerate content via Amazon CloudFront CDN and automate Frontend hosting on AWS Amplify.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 21/07/2026 | 21/07/2026      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 22/07/2026 | 22/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 23/07/2026 | 23/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 24/07/2026 | 24/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 25/07/2026 | 25/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Tasks to implement this week:
+| Day | Task | Start Date | Completion Date | Reference Source |
+| --- | --- | --- | --- | --- |
+| Mon | - Configure ECS Task Definitions, specifying vCPU, RAM memory allocations, and database connectivity environment variables | 21/07/2026 | 21/07/2026 | Group synthesis document |
+| Tue | - Deploy ECS Cluster & ECS Service operating on Serverless AWS Fargate mode | 22/07/2026 | 22/07/2026 | Group synthesis document |
+| Wed | - Configure network routing, public IP assignments, and Security Group rules for ECS Fargate Tasks | 23/07/2026 | 23/07/2026 | Group synthesis document |
+| Thu | - Configure Amazon CloudFront Content Delivery Network (CDN) to accelerate application responsiveness | 24/07/2026 | 24/07/2026 | Group synthesis document |
+| Fri | - Connect Frontend web app with AWS Amplify Hosting, performing end-to-end integration testing across the entire system | 25/07/2026 | 25/07/2026 | Group synthesis document |
 
 ### Week 9 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Successfully registered ECS Task Definitions satisfying all application resource requirements.
+* Successfully operated containerized services on Serverless AWS Fargate via ECS Service management.
+* Routed web traffic securely integrated with Amazon CloudFront CDN.
+* Automated Frontend deployment on AWS Amplify Hosting, achieving full end-to-end architecture integration for the Workshop project.

@@ -1,53 +1,28 @@
 ---
-title: "Week 7 Worklog"
+title: "Worklog Week 7"
 date: 2024-01-01
-weight: 1
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
 
 ### Week 7 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Explore AWS Amplify for building and hosting Fullstack Web and Mobile applications.
+* Establish automated CI/CD deployment pipelines linked with GitHub repositories and integrate Amazon Cognito user authentication.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 07/07/2026 | 07/07/2026      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/07/2026 | 08/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 09/07/2026 | 09/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 10/07/2026 | 10/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 11/07/2026 | 11/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Tasks to implement this week:
+| Day | Task | Start Date | Completion Date | Reference Source |
+| --- | --- | --- | --- | --- |
+| Mon | - Overview of AWS Amplify Hosting & AWS Amplify Studio <br>- Compare Static Site Generation (SSG) vs Server-Side Rendering (SSR) hosting for Next.js/React apps | 07/07/2026 | 07/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| Tue | - **AWS Amplify Hosting Hands-on:** <br>&emsp; + Connect GitHub repository hosting the web application source code <br>&emsp; + Configure build specification (`amplify.yml`) and multi-branch environments | 08/07/2026 | 08/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| Wed | - Manage Environment Variables, Custom Domains, and automated SSL certificate provisioning on AWS Amplify | 09/07/2026 | 09/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| Thu | - Research user authentication integration with Amazon Cognito (User Pools & Identity Pools) | 10/07/2026 | 10/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| Fri | - **Hands-on:** Verify automated CI/CD pipeline triggers (pushing new code to GitHub `main` branch automatically triggers build & deployment) | 11/07/2026 | 11/07/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Week 7 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Mastered modern Fullstack application deployment workflows powered by AWS Amplify.
+* Built automated CI/CD pipelines connected directly to GitHub code repositories.
+* Managed multi-branch staging environments and secure environment variable configurations.
+* Integrated Amazon Cognito authentication mechanisms, finalizing preparation for project execution.

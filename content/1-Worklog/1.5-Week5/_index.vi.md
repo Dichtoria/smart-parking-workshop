@@ -1,55 +1,28 @@
 ---
 title: "Worklog Tuần 5"
 date: 2024-01-01
-weight: 1
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
 
 ### Mục tiêu tuần 5:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu dịch vụ điều phối và vận hành container chuyên nghiệp Amazon Elastic Container Service (ECS).
+* Triển khai ứng dụng container chạy trên chế độ Serverless AWS Fargate tối ưu chi phí hạ tầng.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 23/06/2026   | 23/06/2026      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 24/06/2026   | 24/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 25/06/2026   | 25/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 26/06/2026   | 26/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 27/06/2026   | 27/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Tìm hiểu tổng quan Amazon ECS: Kiến trúc ECS Cluster, Task Definitions, Tasks & Services <br>- Phân biệt 2 chế độ khởi chạy: ECS EC2 Launch Type vs ECS Fargate Launch Type (Serverless) | 23/06/2026 | 23/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - Tìm hiểu cách cấu hình ECS Task Definition (Container Image URI từ ECR, vCPU, RAM, Port Mappings, Environment Variables) <br>- Cấu hình Task Execution IAM Role | 24/06/2026 | 24/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - **Thực hành Amazon ECS:** <br>&emsp; + Tạo ECS Cluster trên nền tảng AWS Fargate <br>&emsp; + Khai báo ECS Task Definition sử dụng Docker Image đã đẩy lên ECR ở tuần 4 | 25/06/2026 | 25/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Cấu hình ECS Service, thiết lập số lượng mong muốn (Desired Tasks) và quy tắc mạng VPC Security Groups cho Task | 26/06/2026 | 26/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - **Thực hành:** Khởi chạy ECS Service trên Fargate, kiểm tra khả năng tự phục hồi khi Task bị dừng và kiểm tra truy cập HTTP/HTTPS trực tiếp đến container | 27/06/2026 | 27/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 5:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Thấu hiểu mô hình điều phối container Amazon ECS và ưu điểm của mô hình Serverless AWS Fargate.
+* Tạo thành công ECS Task Definition định nghĩa đầy đủ tài nguyên phần cứng và thông số container.
+* Triển khai ứng dụng container hoạt động ổn định trên AWS Fargate không cần trực tiếp vận hành EC2 instance.
+* Định tuyến mạng và cấu hình cổng truy cập an toàn cho cụm ECS Tasks.

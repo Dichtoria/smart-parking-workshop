@@ -1,55 +1,28 @@
 ---
 title: "Worklog Tuần 8"
 date: 2024-01-01
-weight: 1
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
 
 ### Mục tiêu tuần 8:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Bước vào giai đoạn cao điểm triển khai dự án Workshop (Giai đoạn 1): Chuẩn bị hạ tầng điện toán, phân quyền bảo mật và khởi tạo hệ thống lưu trữ/cơ sở dữ liệu.
+* Đóng gói ứng dụng vào Container và đẩy thành công các bản build Docker Image lên kho chứa riêng tư trên đám mây.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 14/07/2026   | 14/07/2026      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 15/07/2026   | 15/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 16/07/2026   | 16/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 17/07/2026   | 17/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 18/07/2026   | 18/07/2026      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Chuẩn bị môi trường làm việc, khởi tạo cấu hình công cụ lệnh AWS CLI và thiết lập các vai trò IAM Roles bảo mật cho hệ thống | 14/07/2026 | 14/07/2026 | Nội dung tổng hợp của nhóm |
+| 3 | - Thiết lập hệ thống Cơ sở dữ liệu quan hệ Amazon RDS (PostgreSQL Engine) phục vụ lưu trữ dữ liệu chính cho dự án | 15/07/2026 | 15/07/2026 | Nội dung tổng hợp của nhóm |
+| 4 | - Cấu hình chuỗi quy tắc kiểm soát truy cập an toàn (Security Groups) cho các cổng giao tiếp của cơ sở dữ liệu RDS | 16/07/2026 | 16/07/2026 | Nội dung tổng hợp của nhóm |
+| 5 | - Khởi tạo kho chứa Container riêng tư trên Amazon Elastic Container Registry (Amazon ECR) | 17/07/2026 | 17/07/2026 | Nội dung tổng hợp của nhóm |
+| 6 | - Đóng gói ứng dụng Backend/Services thành các Docker Container Images và thực hiện push an toàn lên Amazon ECR | 18/07/2026 | 18/07/2026 | Nội dung tổng hợp của nhóm |
 
 ### Kết quả đạt được tuần 8:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hoàn thành khởi tạo môi trường lệnh CLI và phân quyền IAM bảo mật toàn diện cho hạ tầng dự án.
+* Triển khai thành công cụm Cơ sở dữ liệu quan hệ Amazon RDS PostgreSQL hoạt động ổn định.
+* Cấu hình tường lửa Security Group khóa chặt cổng kết nối cơ sở dữ liệu, đảm bảo tiêu chuẩn bảo mật.
+* Đóng gói thành công ứng dụng vào Docker Container và đẩy hoàn tất các Container Images lên Amazon ECR.

@@ -1,55 +1,28 @@
 ---
 title: "Worklog Tuần 11"
 date: 2024-01-01
-weight: 2
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
 
 ### Mục tiêu tuần 11:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Mở rộng nghiên cứu mảng Phân tích Dữ liệu (Data Analytics) trên AWS theo lộ trình học tập mở rộng.
+* Xây dựng kiến trúc Data Lake với Amazon S3, lập chỉ mục dữ liệu tự động với AWS Glue Crawlers, truy vấn bằng Amazon Athena và trực quan hóa với Amazon QuickSight.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 04/08/2026   | 04/08/2026      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 05/08/2026   | 05/08/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 06/08/2026   | 06/08/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 07/08/2026   | 07/08/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 08/08/2026   | 08/08/2026      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Tìm hiểu tổng quan kiến trúc Hồ dữ liệu (Data Lake) trên đám mây và vai trò của Amazon S3 lưu trữ dữ liệu thô (Raw Data Lake) | 04/08/2026 | 04/08/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - Tìm hiểu dịch vụ tích hợp dữ liệu serverless AWS Glue: AWS Glue Crawlers, Glue Data Catalog & các Glue ETL Jobs chuyển đổi dữ liệu | 05/08/2026 | 05/08/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - **Thực hành AWS Glue:** Tạo Glue Crawler trỏ đến S3 Data Lake, lập chỉ mục tự động và trích xuất sơ đồ bảng dữ liệu (Data Catalog Table) | 06/08/2026 | 06/08/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Nghiên cứu dịch vụ truy vấn serverless Amazon Athena: Thực hiện truy vấn chuẩn SQL trực tiếp trên các tập tin dữ liệu lưu trữ ở S3 | 07/08/2026 | 07/08/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - Kết nối Amazon Athena với dịch vụ báo cáo thông minh Amazon QuickSight, thiết lập Bảng điều khiển (BI Dashboard) trực quan hóa biểu đồ dữ liệu | 08/08/2026 | 08/08/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 11:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hiểu rõ kiến trúc Data Lake và quy trình khai thác dữ liệu quy mô lớn trên AWS.
+* Thiết lập thành công AWS Glue Crawler tự động quét và tạo Data Catalog cho dữ liệu S3.
+* Nắm vững kỹ thuật truy vấn dữ liệu không cần máy chủ (Serverless SQL Query) với Amazon Athena.
+* Xây dựng báo cáo Business Intelligence (BI Dashboard) trực quan mượt mà trên Amazon QuickSight.
