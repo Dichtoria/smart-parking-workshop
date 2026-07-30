@@ -1,31 +1,25 @@
 ---
-title: "Blog 3"
+title: "Blog 3: AWS AI/ML Services & Amazon SageMaker"
 date: 2024-01-01
-weight: 1
+weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
+# AWS AI/ML Services | Integrating Artificial Intelligence into Applications with Amazon SageMaker & AWS AI Services
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+This article explores end-to-end workflows for building, training, and integrating Artificial Intelligence (AI) and Machine Learning (ML) capabilities into applications using AWS AI/ML services and Amazon SageMaker.
+
+![Post3](/images/3-BlogsPosted/3.png)
+
 
 Key points to know:
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+* **Layered AI/ML Ecosystem**: Leverage pre-trained Managed AI Services via simple API calls or utilize Amazon SageMaker for custom end-to-end ML model development.
+* **Streamlined MLOps Lifecycle Management**: Amazon SageMaker Studio provides integrated Jupyter Notebooks, automated hyperparameter tuning, and transparent experiment tracking.
+* **Auto-scaling Inference Endpoints**: Real-time prediction API endpoints scale capacity automatically based on live application user request traffic.
+* **Standard 3-Step ML Pipeline**: Data preparation on S3 -> Model training on scalable GPU clusters -> Endpoint deployment accessible via REST APIs.
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
+The AWS AI/ML service suite empowers software developers to seamlessly embed intelligent capabilities into production applications within days.
 
-...Image...
-
-...Link...
-
-...Guide...
+* **Detailed Guide Link**: [Amazon SageMaker Official Blog](https://aws.amazon.com/blogs/aws/sagemaker/)

@@ -1,31 +1,21 @@
 ---
-title: "Blog 1"
+title: "Blog 1: AWS Reliability & Disaster Recovery"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
+# AWS Reliability & DR | Building Disaster Recovery Strategies and Distributed Networking on AWS
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+This article explores cloud Disaster Recovery (DR) solutions on AWS designed to minimize critical RTO (Recovery Time Objective) and RPO (Recovery Point Objective) metrics for enterprise systems by combining AWS Elastic Disaster Recovery (AWS DRS) and AWS Transit Gateway.
 
 Key points to know:
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+* **AWS Elastic Disaster Recovery (AWS DRS)** enables continuous block-level replication of physical or virtual servers from On-Premises or cross-region environments at optimal storage costs.
+* **DR Infrastructure Cost Optimization**: Replicates data to cost-effective EBS volumes, launching EC2 instances only during actual failover events.
+* **Real-time Synchronization**: Achieves sub-second RPO and minute-level RTO recovery targets.
+* **Centralized Network Management**: Leverages AWS Transit Gateway as a multi-VPC network hub, eliminating complex peer-to-peer VPC Peering connections.
+* **Standard 3-Step Workflow**: Install DRS Agent -> Configure Launch Settings -> Perform periodic DR Drills without impacting production environments.
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
-
-...Image...
-
-...Link...
-
-...Guide...
+This DR framework enables enterprises to proactively manage infrastructure disruptions and streamline recovery drills for SysAdmin teams.

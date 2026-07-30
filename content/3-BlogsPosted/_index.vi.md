@@ -6,17 +6,13 @@ chapter: false
 pre: " <b> 3. </b> "
 ---
 
-{{% notice warning %}}  
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+Các bài viết Blog chuyên sâu về giải pháp đám mây AWS đã được đăng tải trên cộng đồng **AWS Study Group**:
 
-Tại đây sẽ là phần liệt kê, giới thiệu các blogs mà các bạn đã đăng trên [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj). Ví dụ:
+### [Blog 1 - AWS Reliability & DR | Xây dựng chiến lược khắc phục sự cố (Disaster Recovery) và mạng phân tán trên AWS](3.1-blog1/)
+Bài viết chia sẻ phương pháp triển khai giải pháp AWS Elastic Disaster Recovery (AWS DRS) kết hợp AWS Transit Gateway nhằm tối ưu chỉ số RTO/RPO, đồng bộ dữ liệu thời gian thực và quản lý mạng tập trung với chi phí tối ưu.
 
-###  [Blog 1 - SESSION POLICIES TRONG AMAZON EKS POD IDENTITY](3.1-Blog1/)
-Blog này giới thiệu Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+### [Blog 2 - Amazon EventBridge Scheduler | Một dịch vụ nhỏ nhưng rất hữu ích khi làm project trên AWS](3.2-blog2/)
+Bài viết chia sẻ trải nghiệm sử dụng Amazon EventBridge Scheduler tự động hóa các tác vụ lập lịch theo thời gian trên đám mây AWS mà không cần quản lý máy chủ Cron Job thủ công.
 
-###  [Blog 2 - ...](3.2-Blog2/)
-Blog này giới thiệu Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
-
-###  [Blog 3 - ...](3.3-Blog3/)
-Blog này giới thiệu Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+### [Blog 3 - AWS AI/ML Services | Tích hợp Trí tuệ nhân tạo vào ứng dụng với Amazon SageMaker & AWS AI Services](3.3-blog3/)
+Bài viết khám phá quy trình xây dựng, huấn luyện và tích hợp các mô hình Trí tuệ nhân tạo (AI) và Học máy (Machine Learning) vào ứng dụng thực tế với nền tảng Amazon SageMaker và AWS AI Services.

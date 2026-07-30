@@ -1,31 +1,22 @@
 ---
-title: "Blog 2"
+title: "Blog 2: Amazon EventBridge Scheduler"
 date: 2024-01-01
-weight: 1
+weight: 2
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-# SESSION POLICIES TRONG AMAZON EKS POD IDENTITY
+# Amazon EventBridge Scheduler | Một dịch vụ nhỏ nhưng rất hữu ích khi làm project trên AWS
 
-Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+Bài viết chia sẻ trải nghiệm sử dụng **Amazon EventBridge Scheduler** để tự động hóa các tác vụ lập lịch theo thời gian trên AWS mà không cần khởi tạo hay quản lý máy chủ Cron Job thủ công.
 
 Các điểm chính cần nắm:
 
-* Session policy là một IAM policy inline được chỉ định khi tạo hoặc cập nhật Pod Identity association.
-* Quyền hiệu quả = intersection (giao) giữa permissions của IAM role và session policy → session policy chỉ có thể thu hẹp, không thể mở rộng quyền.
-* Giúp tránh tình trạng over-permissioning khi reuse chung một IAM role cho nhiều workloads có nhu cầu khác nhau.
-* Hỗ trợ cả same-account và cross-account (qua IAM role chaining).
-* Giảm đáng kể số lượng IAM roles cần quản lý, tránh chạm giới hạn quota IAM trong cluster lớn.
-* Cấu hình dễ dàng qua AWS Management Console, AWS CLI hoặc AWS SDK khi tạo association giữa Kubernetes ServiceAccount và IAM role.
+* **Không cần duy trì máy chủ (Serverless)**: Thay thế hoàn toàn việc tạo EC2 chỉ để chạy Cron Job, giúp tiết kiệm chi phí vận hành và không tốn công quản trị server.
+* **Dễ dàng tích hợp hệ sinh thái AWS**: Cho phép gọi trực tiếp các dịch vụ như AWS Lambda, Amazon ECS, AWS Step Functions, Amazon SNS, SQS và EventBus chỉ với vài thao tác cấu hình.
+* **Lập lịch linh hoạt**: Hỗ trợ đa dạng kiểu lập lịch từ chạy một lần (One-time), chạy định kỳ (Recurring), biểu thức Rate Expression đến Cron Expression.
+* **Tính năng hỗ trợ nâng cao**: Tích hợp sẵn cơ chế thử lại (Retry) khi lỗi, vùng thời gian linh hoạt (Flexible Time Window) chống quá tải và lưu vết tác vụ hỏng qua Dead-letter Queue (DLQ).
 
-Tính năng này đặc biệt hữu ích khi bạn có nhiều ứng dụng chạy trên cùng một IAM role nhưng cần giới hạn quyền khác nhau (ví dụ: một pod chỉ đọc S3 bucket cụ thể, pod khác chỉ gọi một số API nhất định).
+Dịch vụ giúp đơn giản hóa quy trình tự động hóa các tác vụ định kỳ cho dự án, tiêu biểu như tự động kích hoạt AWS Lambda cập nhật dữ liệu mỗi 30 phút trong môi trường thực hành.
 
-...Hình ảnh...
-
-...Link...
-
-...Hướng dẫn...
+* **Đường dẫn tài liệu chi tiết**: [Amazon EventBridge Scheduler User Guide](https://docs.aws.amazon.com/scheduler/latest/UserGuide/what-is-scheduler.html)
