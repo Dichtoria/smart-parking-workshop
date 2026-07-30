@@ -6,30 +6,32 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-**On this page**, you will need to introduce your worklog. **How** did you complete it? How many weeks did you take to complete the program? **What** did you do in those weeks?
+The Worklog documents the entire learning path, cloud services exploration, hands-on architectural labs, and project implementations across the 12-week internship in the **First Cloud AI Journey (FCAJ)** program at AWS Vietnam Co., Ltd.
 
-Typically, and as a standard, a worklog is carried out over about 3 months (throughout the internship period) with weekly contents as follows:
+The core focus of the project is designing cloud-standard system architecture on AWS, managing Relational Databases with Amazon RDS (PostgreSQL), containerizing and orchestrating applications using Container technologies (Docker/ECR/ECS Fargate), accelerating Content Delivery Networks with Amazon CloudFront, and deploying automated Fullstack Web applications with AWS Amplify.
 
-**Week 1:** [Getting familiar with AWS and basic AWS services](1.1-week1/)
+Detailed weekly contents:
 
-**Week 2:** [Doing task A...](1.2-week2/)
+**Week 1:** [Onboarding & AWS Cloud Fundamentals Overview](1.1-week1/)
 
-**Week 3:** [Doing task B...](1.3-week3/)
+**Week 2:** [Secure Access Management with AWS IAM (Identity & Access Management)](1.2-week2/)
 
-**Week 4:** [Doing task C...](1.4-week4/)
+**Week 3:** [Relational Database Management with Amazon RDS](1.3-week3/)
 
-**Week 5:** [Doing task D...](1.5-week5/)
+**Week 4:** [Containerizing Applications with Docker & Amazon ECR](1.4-week4/)
 
-**Week 6:** [Doing task E...](1.6-week6/)
+**Week 5:** [Container Orchestration & Operations with Amazon ECS](1.5-week5/)
 
-**Week 7:** [Doing task G...](1.7-week7/)
+**Week 6:** [Content Delivery Network & Performance Optimization with Amazon CloudFront](1.6-week6/)
 
-**Week 8:** [Doing task H...](1.8-week8/)
+**Week 7:** [Deploying Fullstack Web Applications with AWS Amplify](1.7-week7/)
 
-**Week 9:** [Doing task I...](1.9-week9/)
+**Week 8:** [Workshop Project Peak Execution (Phase 1: RDS Database & ECR Containers)](1.8-week8/)
 
-**Week 10:** [Doing task L...](1.10-week10/)
+**Week 9:** [Workshop Project Peak Execution (Phase 2: ECS Fargate, CloudFront CDN & Amplify)](1.9-week9/)
 
-**Week 11:** [Doing task M...](1.11-week11/)
+**Week 10:** [Extended Infrastructure Security with AWS SSM, KMS & AWS WAF](1.10-week10/)
 
-**Week 12:** [Doing task N...](1.12-week12/)
+**Week 11:** [Extended Data Lake & Analytics (Data Lake, AWS Glue, Athena, QuickSight)](1.11-week11/)
+
+**Week 12:** [Extended AI/ML Services (Amazon SageMaker), Step Functions & Cost Optimization](1.12-week12/)
