@@ -32,9 +32,9 @@ Hệ thống Smart Parking System giúp người dùng có thể đăng ký trư
 - Thời gian hoàn vốn đầu tư (ROI) ước tính từ 6 đến 12 tháng.
 
 ### 3. Kiến trúc giải pháp
-Hệ thống áp dụng kiến trúc hiện đại kết hợp AI và AWS Cloud Services để xử lý luồng dữ liệu thời gian thực từ các bãi đỗ xe:
+Hệ thống áp dụng kiến trúc hiện đại kết hợp Edge AI và AWS Cloud Services để xử lý luồng dữ liệu thời gian thực từ các bãi đỗ xe:
 
-![Architecture](/images/2-Proposal/FINAL_ARCHITECTURE.png)
+![AWS Architecture](/images/2-Proposal/FINAL_ARCHITECTURE.png)
 
 *Dịch vụ AWS sử dụng*  
 - **AWS CLI & IAM**: Quản lý dòng lệnh và phân quyền truy cập bảo mật theo nguyên tắc quyền tối thiểu.
@@ -103,15 +103,15 @@ Chi phí hạ tầng được tính toán dựa trên [AWS Pricing Calculator](h
 
 **Giao diện menu-login**
 
-![Menu-login](/images/2-Proposal/menu_login.png)
+![Menu-login](/images/2-Proposal/Frontend_menu.png)
 
 **Giao diện booking**
 
-![Booking](/images/2-Proposal/menu_booking.png)
+![Booking](/images/2-Proposal/booking.png)
 
 **Giao diện admin**
 
-![Admin](/images/2-Proposal/menu_admin.png)
+![Admin](/images/2-Proposal/admin.png)
 
 **Giao diện thanh toán VNPay**
 

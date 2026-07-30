@@ -103,15 +103,15 @@ Infrastructure costs calculated via [AWS Pricing Calculator](https://calculator.
 
 **Menu-login Interface**
 
-![Menu-login](/images/2-Proposal/menu_login.png)
+![Menu-login](/images/2-Proposal/Frontend_menu.png)
 
 **Booking Interface**
 
-![Booking](/images/2-Proposal/menu_booking.png)
+![Booking](/images/2-Proposal/booking.png)
 
 **Admin Interface**
 
-![Admin](/images/2-Proposal/menu_admin.png)
+![Admin](/images/2-Proposal/admin.png)
 
 **VNPay Payment Interface**
 
