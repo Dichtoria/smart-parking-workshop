@@ -5,104 +5,116 @@ weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-Tại phần này, bạn cần tóm tắt các nội dung trong workshop mà bạn **dự tính** sẽ làm.
+# Smart Parking System
+## Giải pháp Hệ thống Bãi đỗ xe Thông minh Tích hợp AI & AWS Cloud
 
-# IoT Weather Platform for Lab Research  
-## Giải pháp AWS Serverless hợp nhất cho giám sát thời tiết thời gian thực  
+### 1. Tóm tắt điều hành
+Hệ thống **Smart Parking System** được thiết kế nhằm giải quyết bài toán quản lý bãi đỗ xe hiện đại, tối ưu hóa quá trình tìm kiếm vị trí đỗ và tự động hóa nhận diện phương tiện ra/vào. Nền tảng kết hợp công nghệ Trí tuệ nhân tạo (AI/Computer Vision) với hạ tầng điện toán đám mây AWS mạnh mẽ, có khả năng tự động nhận diện biển số xe, giám sát ô trống thời gian thực và quản lý tập trung. Hệ thống tận dụng các dịch vụ AWS Serverless & Containerization (Amazon RDS PostgreSQL, Amazon ECS Fargate, Amazon ECR, Amazon CloudFront và AWS Amplify) nhằm đảm bảo tính sẵn sàng cao, khả năng mở rộng linh hoạt và tối ưu chi phí vận hành mà không cần phụ thuộc vào bộ cân bằng tải đắt đỏ.
 
-### 1. Tóm tắt điều hành  
-IoT Weather Platform được thiết kế dành cho nhóm *ITea Lab* tại TP. Hồ Chí Minh nhằm nâng cao khả năng thu thập và phân tích dữ liệu thời tiết. Nền tảng hỗ trợ tối đa 5 trạm thời tiết, có khả năng mở rộng lên 10–15 trạm, sử dụng thiết bị biên Raspberry Pi kết hợp cảm biến ESP32 để truyền dữ liệu qua MQTT. Nền tảng tận dụng các dịch vụ AWS Serverless để cung cấp giám sát thời gian thực, phân tích dự đoán và tiết kiệm chi phí, với quyền truy cập giới hạn cho 5 thành viên phòng lab thông qua Amazon Cognito.  
-
-### 2. Tuyên bố vấn đề  
+### 2. Tuyên bố vấn đề
 *Vấn đề hiện tại*  
-Các trạm thời tiết hiện tại yêu cầu thu thập dữ liệu thủ công, khó quản lý khi có nhiều trạm. Không có hệ thống tập trung cho dữ liệu hoặc phân tích thời gian thực, và các nền tảng bên thứ ba thường tốn kém và quá phức tạp.  
+Các bãi đỗ xe truyền thống đang gặp nhiều hạn chế:
+- **Thu thập & quản lý thủ công**: Người lái xe mất nhiều thời gian tìm ô trống, gây ùn tắc giao thông nội bộ bãi xe.
+- **Thiếu giám sát thời gian thực**: Ban quản lý không nắm bắt chính xác mật độ ô trống và lưu lượng xe theo thời gian thực.
+- **Rủi ro thất thoát & chi phí nhân sự cao**: Kiểm soát xe ra vào phụ thuộc vào vé giấy hoặc thẻ từ thủ công, dễ phát sinh sai sót và gian lận.
 
 *Giải pháp*  
-Nền tảng sử dụng AWS IoT Core để tiếp nhận dữ liệu MQTT, AWS Lambda và API Gateway để xử lý, Amazon S3 để lưu trữ (bao gồm data lake), và AWS Glue Crawlers cùng các tác vụ ETL để trích xuất, chuyển đổi, tải dữ liệu từ S3 data lake sang một S3 bucket khác để phân tích. AWS Amplify với Next.js cung cấp giao diện web, và Amazon Cognito đảm bảo quyền truy cập an toàn. Tương tự như Thingsboard và CoreIoT, người dùng có thể đăng ký thiết bị mới và quản lý kết nối, nhưng nền tảng này hoạt động ở quy mô nhỏ hơn và phục vụ mục đích sử dụng nội bộ. Các tính năng chính bao gồm bảng điều khiển thời gian thực, phân tích xu hướng và chi phí vận hành thấp.  
+Hệ thống Smart Parking System giúp người dùng có thể đăng ký trước chỗ trống, sinh QR giữ chỗ, thanh toán trước. Hệ thống sử dụng AI (Computer Vision) để tự động quét nhận diện biển số và QR tại cổng vào/ra.
+- **Backend & Cơ sở dữ liệu**: Đóng gói trong Docker Container, lưu trữ image trên Amazon ECR và vận hành trên nền tảng Serverless Amazon ECS Fargate. Lưu trữ dữ liệu giao dịch và thông tin xe an toàn với Amazon RDS PostgreSQL.
+- **Mạng phân phối & Giao diện**: Amazon CloudFront CDN kết nối trực tiếp đến ECS Backend giúp giảm độ trễ truyền tải dữ liệu thời gian thực; AWS Amplify lưu trữ ứng dụng Web Fullstack (Next.js/React) cho phép tài xế và ban quản lý truy cập bảng điều khiển (Dashboard) mọi lúc, mọi nơi.
+- **Bảo mật**: Phân quyền chi tiết bằng AWS IAM và bảo vệ hạ tầng với Security Groups. (Bảo mật này chỉ sử dụng để demo, nếu triển khai production có thể sử dụng những service bảo mật cao hơn như WAF,...)
 
 *Lợi ích và hoàn vốn đầu tư (ROI)*  
-Giải pháp tạo nền tảng cơ bản để các thành viên phòng lab phát triển một nền tảng IoT lớn hơn, đồng thời cung cấp nguồn dữ liệu cho những người nghiên cứu AI phục vụ huấn luyện mô hình hoặc phân tích. Nền tảng giảm bớt báo cáo thủ công cho từng trạm thông qua hệ thống tập trung, đơn giản hóa quản lý và bảo trì, đồng thời cải thiện độ tin cậy dữ liệu. Chi phí hàng tháng ước tính 0,66 USD (theo AWS Pricing Calculator), tổng cộng 7,92 USD cho 12 tháng. Tất cả thiết bị IoT đã được trang bị từ hệ thống trạm thời tiết hiện tại, không phát sinh chi phí phát triển thêm. Thời gian hoàn vốn 6–12 tháng nhờ tiết kiệm đáng kể thời gian thao tác thủ công.  
+- Giảm 60% thời gian tìm kiếm chỗ đỗ xe cho người điều khiển phương tiện.
+- Tự động hóa 90% quy trình kiểm soát xe vào/ra, cắt giảm chi phí nhân sự vận hành bãi xe.
+- Tối ưu chi phí hạ tầng tối đa nhờ loại bỏ Load Balancer (ALB) không cần thiết và áp dụng mô hình Serverless/Pay-as-you-go của AWS.
+- Thời gian hoàn vốn đầu tư (ROI) ước tính từ 6 đến 12 tháng.
 
-### 3. Kiến trúc giải pháp  
-Nền tảng áp dụng kiến trúc AWS Serverless để quản lý dữ liệu từ 5 trạm dựa trên Raspberry Pi, có thể mở rộng lên 15 trạm. Dữ liệu được tiếp nhận qua AWS IoT Core, lưu trữ trong S3 data lake và xử lý bởi AWS Glue Crawlers và ETL jobs để chuyển đổi và tải vào một S3 bucket khác cho mục đích phân tích. Lambda và API Gateway xử lý bổ sung, trong khi Amplify với Next.js cung cấp bảng điều khiển được bảo mật bởi Cognito.  
+### 3. Kiến trúc giải pháp
+Hệ thống áp dụng kiến trúc hiện đại kết hợp AI và AWS Cloud Services để xử lý luồng dữ liệu thời gian thực từ các bãi đỗ xe:
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
-
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+![Architecture](/images/2-Proposal/FINAL_ARCHITECTURE.png)
 
 *Dịch vụ AWS sử dụng*  
-- *AWS IoT Core*: Tiếp nhận dữ liệu MQTT từ 5 trạm, mở rộng lên 15.  
-- *AWS Lambda*: Xử lý dữ liệu và kích hoạt Glue jobs (2 hàm).  
-- *Amazon API Gateway*: Giao tiếp với ứng dụng web.  
-- *Amazon S3*: Lưu trữ dữ liệu thô (data lake) và dữ liệu đã xử lý (2 bucket).  
-- *AWS Glue*: Crawlers lập chỉ mục dữ liệu, ETL jobs chuyển đổi và tải dữ liệu.  
-- *AWS Amplify*: Lưu trữ giao diện web Next.js.  
-- *Amazon Cognito*: Quản lý quyền truy cập cho người dùng phòng lab.  
+- **AWS CLI & IAM**: Quản lý dòng lệnh và phân quyền truy cập bảo mật theo nguyên tắc quyền tối thiểu.
+- **Amazon RDS (PostgreSQL)**: Cơ sở dữ liệu quan hệ quản lý lưu trữ dữ liệu biển số, lịch sử ra/vào và trạng thái ô đỗ.
+- **Amazon ECR (Elastic Container Registry)**: Lưu trữ và quản lý các Docker Container Images an toàn.
+- **Amazon ECS (AWS Fargate)**: Điều phối và chạy ứng dụng Backend Container ở chế độ Serverless không cần quản lý máy chủ.
+- **Amazon CloudFront**: Mạng phân phối nội dung (CDN) toàn cầu trỏ trực tiếp nguồn về ECS Service giúp tăng tốc truyền tải API & dữ liệu thời gian thực.
+- **AWS Amplify**: Triển khai và lưu trữ ứng dụng Frontend Web Fullstack với quy trình tự động hóa CI/CD.
 
 *Thiết kế thành phần*  
-- *Thiết bị biên*: Raspberry Pi thu thập và lọc dữ liệu cảm biến, gửi tới IoT Core.  
-- *Tiếp nhận dữ liệu*: AWS IoT Core nhận tin nhắn MQTT từ thiết bị biên.  
-- *Lưu trữ dữ liệu*: Dữ liệu thô lưu trong S3 data lake; dữ liệu đã xử lý lưu ở một S3 bucket khác.  
-- *Xử lý dữ liệu*: AWS Glue Crawlers lập chỉ mục dữ liệu; ETL jobs chuyển đổi để phân tích.  
-- *Giao diện web*: AWS Amplify lưu trữ ứng dụng Next.js cho bảng điều khiển và phân tích thời gian thực.  
-- *Quản lý người dùng*: Amazon Cognito giới hạn 5 tài khoản hoạt động.  
+- **Thiết bị camera & xử lý AI**: Camera ghi hình tại cổng ra/vào và các ô đỗ, mô hình AI trích xuất biển số xe & trạng thái ô trống.
+- **Tiếp nhận & xử lý backend**: Amazon CloudFront định tuyến trực tiếp yêu cầu API về cụm ECS Fargate Tasks xử lý logic nghiệp vụ.
+- **Lưu trữ dữ liệu**: Amazon RDS PostgreSQL lưu trữ dữ liệu giao dịch; Amazon ECR lưu trữ hình ảnh ứng dụng.
+- **Giao diện người dùng (Dashboard)**: AWS Amplify cung cấp giao diện Web hiển thị sơ đồ bãi xe thời gian thực cho khách hàng và ban quản lý.
 
-### 4. Triển khai kỹ thuật  
+### 4. Triển khai kỹ thuật
 *Các giai đoạn triển khai*  
-Dự án gồm 2 phần — thiết lập trạm thời tiết biên và xây dựng nền tảng thời tiết — mỗi phần trải qua 4 giai đoạn:  
-1. *Nghiên cứu và vẽ kiến trúc*: Nghiên cứu Raspberry Pi với cảm biến ESP32 và thiết kế kiến trúc AWS Serverless (1 tháng trước kỳ thực tập).  
-2. *Tính toán chi phí và kiểm tra tính khả thi*: Sử dụng AWS Pricing Calculator để ước tính và điều chỉnh (Tháng 1).  
-3. *Điều chỉnh kiến trúc để tối ưu chi phí/giải pháp*: Tinh chỉnh (ví dụ tối ưu Lambda với Next.js) để đảm bảo hiệu quả (Tháng 2).  
-4. *Phát triển, kiểm thử, triển khai*: Lập trình Raspberry Pi, AWS services với CDK/SDK và ứng dụng Next.js, sau đó kiểm thử và đưa vào vận hành (Tháng 2–3).  
+1. **Nghiên cứu & Thiết kế kiến trúc**: Nghiên cứu mô hình AI nhận diện biển số và vẽ kiến trúc tổng thể AWS (Tháng 1).
+2. **Xây dựng & Đóng gói Container**: Xây dựng backend ứng dụng, đóng gói Docker Images và đưa lên Amazon ECR (Tháng 1 - Tháng 2).
+3. **Triển khai Hạ tầng AWS Cloud**: Khởi tạo RDS PostgreSQL, VPC, ECS Fargate Cluster, CloudFront CDN và AWS Amplify (Tháng 2).
+4. **Tích hợp & Kiểm thử End-to-End**: Kết nối toàn bộ luồng từ camera/AI -> ECS Backend -> RDS Database -> Amplify Frontend (Tháng 2 - Tháng 3).
 
 *Yêu cầu kỹ thuật*  
-- *Trạm thời tiết biên*: Cảm biến (nhiệt độ, độ ẩm, lượng mưa, tốc độ gió), vi điều khiển ESP32, Raspberry Pi làm thiết bị biên. Raspberry Pi chạy Raspbian, sử dụng Docker để lọc dữ liệu và gửi 1 MB/ngày/trạm qua MQTT qua Wi-Fi.  
-- *Nền tảng thời tiết*: Kiến thức thực tế về AWS Amplify (lưu trữ Next.js), Lambda (giảm thiểu do Next.js xử lý), AWS Glue (ETL), S3 (2 bucket), IoT Core (gateway và rules), và Cognito (5 người dùng). Sử dụng AWS CDK/SDK để lập trình (ví dụ IoT Core rules tới S3). Next.js giúp giảm tải Lambda cho ứng dụng web fullstack.  
+- **Hệ thống AI Biên**: Mô hình Computer Vision (YOLO/OCR) tối ưu chạy trên thiết bị biên hoặc máy chủ trung tâm.
+- **Hạ tầng AWS Cloud**: Yêu cầu kiến thức vận hành AWS CLI, Docker, Amazon ECR, Amazon ECS Fargate, Amazon RDS PostgreSQL, CloudFront CDN và AWS Amplify.
 
-### 5. Lộ trình & Mốc triển khai  
-- *Trước thực tập (Tháng 0)*: 1 tháng lên kế hoạch và đánh giá trạm cũ.  
-- *Thực tập (Tháng 1–3)*:  
-    - Tháng 1: Học AWS và nâng cấp phần cứng.  
-    - Tháng 2: Thiết kế và điều chỉnh kiến trúc.  
-    - Tháng 3: Triển khai, kiểm thử, đưa vào sử dụng.  
-- *Sau triển khai*: Nghiên cứu thêm trong vòng 1 năm.  
+### 5. Lộ trình & Mốc triển khai
+- **Giai đoạn 1 (Tuần 1 - 4)**: Tìm hiểu kiến thức AWS cơ bản, phân quyền IAM, thiết lập VPC & khởi tạo CSDL Amazon RDS PostgreSQL.
+- **Giai đoạn 2 (Tuần 5 - 7)**: Đóng gói Docker Container, đẩy ECR, triển khai cụm ECS Fargate, tích hợp CloudFront & AWS Amplify.
+- **Giai đoạn 3 (Tuần 8 - 9)**: Triển khai cao điểm dự án Workshop, tích hợp end-to-end toàn bộ hệ thống bãi đỗ xe thông minh.
+- **Giai đoạn 4 (Tuần 10 - 12)**: Đánh giá an toàn bảo mật, tối ưu hóa chi phí vận hành (Cost Optimization) và tổng kết báo cáo.
 
-### 6. Ước tính ngân sách  
-Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)  
-Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.pdf).  
+### 6. Ước tính ngân sách
+Chi phí hạ tầng được tính toán dựa trên [AWS Pricing Calculator](https://calculator.aws/):
 
-*Chi phí hạ tầng*  
-- AWS Lambda: 0,00 USD/tháng (1.000 request, 512 MB lưu trữ).  
-- S3 Standard: 0,15 USD/tháng (6 GB, 2.100 request, 1 GB quét).  
-- Truyền dữ liệu: 0,02 USD/tháng (1 GB vào, 1 GB ra).  
-- AWS Amplify: 0,35 USD/tháng (256 MB, request 500 ms).  
-- Amazon API Gateway: 0,01 USD/tháng (2.000 request).  
-- AWS Glue ETL Jobs: 0,02 USD/tháng (2 DPU).  
-- AWS Glue Crawlers: 0,07 USD/tháng (1 crawler).  
-- MQTT (IoT Core): 0,08 USD/tháng (5 thiết bị, 45.000 tin nhắn).  
+*Chi phí hạ tầng AWS ước tính hàng tháng:*
+- **Amazon RDS PostgreSQL (db.t4g.micro / Free Tier)**: ~14.50 USD/tháng (0.00 USD nếu dùng Free Tier).
+- **Amazon ECS Fargate (0.25 vCPU, 0.5 GB RAM)**: ~9.00 USD/tháng.
+- **Amazon ECR (Lưu trữ 5 GB Container Images)**: ~0.50 USD/tháng.
+- **Amazon CloudFront (10 GB Data Transfer Out)**: ~0.85 USD/tháng.
+- **AWS Amplify (Hosting & Build time)**: ~1.50 USD/tháng.
+- **Route 53 & Tên miền**: ~1.00 USD/tháng.
 
-*Tổng*: 0,7 USD/tháng, 8,40 USD/12 tháng  
-- *Phần cứng*: 265 USD một lần (Raspberry Pi 5 và cảm biến).  
+*Tổng chi phí AWS ước tính*: **~27.35 USD/tháng** (Ước tính < 10 USD/tháng khi áp dụng gói AWS Free Tier và không phát sinh chi phí ALB).
 
-### 7. Đánh giá rủi ro  
+### 7. Đánh giá rủi ro
 *Ma trận rủi ro*  
-- Mất mạng: Ảnh hưởng trung bình, xác suất trung bình.  
-- Hỏng cảm biến: Ảnh hưởng cao, xác suất thấp.  
-- Vượt ngân sách: Ảnh hưởng trung bình, xác suất thấp.  
+- **Sự cố mất kết nối mạng Internet**: Ảnh hưởng Cao, Xác suất Trung bình.
+- **Lỗi nhận diện AI do ánh sáng/biển số mờ**: Ảnh hưởng Trung bình, Xác suất Trung bình.
+- **Vượt ngân sách chi phí AWS**: Ảnh hưởng Trung bình, Xác suất Thấp.
 
 *Chiến lược giảm thiểu*  
-- Mạng: Lưu trữ cục bộ trên Raspberry Pi với Docker.  
-- Cảm biến: Kiểm tra định kỳ, dự phòng linh kiện.  
-- Chi phí: Cảnh báo ngân sách AWS, tối ưu dịch vụ.  
+- **Mạng**: Thiết lập bộ đệm dữ liệu cục bộ (Local Caching) tại thiết bị biên khi mất mạng tạm thời.
+- **AI**: Kết hợp xử lý tiền ảnh (Pre-processing) và cho phép xác nhận thủ công trên Dashboard khi độ tin cậy AI < 85%.
+- **Chi phí**: Cấu hình cảnh báo ngân sách AWS Budgets khi chi phí vượt quá 80% ngưỡng dự kiến.
 
 *Kế hoạch dự phòng*  
-- Quay lại thu thập thủ công nếu AWS gặp sự cố.  
-- Sử dụng CloudFormation để khôi phục cấu hình liên quan đến chi phí.  
+- Sử dụng CloudFormation / AWS CDK để khôi phục nhanh toàn bộ hạ tầng trong trường hợp gặp sự cố.
+- Chuyển sang chế độ nhập biển số thủ công trên Web Dashboard nếu camera gặp hỏng hóc.
 
-### 8. Kết quả kỳ vọng  
-*Cải tiến kỹ thuật*: Dữ liệu và phân tích thời gian thực thay thế quy trình thủ công. Có thể mở rộng tới 10–15 trạm.  
-*Giá trị dài hạn*: Nền tảng dữ liệu 1 năm cho nghiên cứu AI, có thể tái sử dụng cho các dự án tương lai.
+### 8. Kết quả kỳ vọng
+*Cải tiến kỹ thuật*: Tự động hóa hoàn toàn quy trình nhận diện và quản lý bãi đỗ xe theo thời gian thực. Hạ tầng đám mây Serverless tối giản không cần ALB giúp tối ưu chi phí vận hành tối đa.  
+*Giá trị dài hạn*: Cung cấp nguồn dữ liệu chuẩn hóa cho các bài toán phân tích giao thông đô thị, tối ưu chi phí vận hành bãi xe và nâng cao trải nghiệm người dùng.
+
+### 9. Demo một số kết quả đạt được
+
+**Giao diện menu-login**
+
+![Menu-login](/images/2-Proposal/menu_login.png)
+
+**Giao diện booking**
+
+![Booking](/images/2-Proposal/menu_booking.png)
+
+**Giao diện admin**
+
+![Admin](/images/2-Proposal/menu_admin.png)
+
+**Giao diện thanh toán VNPay**
+
+![VNPay1](/images/2-Proposal/vnp1.png)
+
+![VNPay2](/images/2-Proposal/vnp2.png)

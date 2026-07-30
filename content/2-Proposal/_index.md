@@ -5,111 +5,116 @@ weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
-
-# IoT Weather Platform for Lab Research
-## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
+# Smart Parking System
+## Integrated AI & AWS Cloud Smart Parking Solution
 
 ### 1. Executive Summary
-The IoT Weather Platform is designed for the ITea Lab team in Ho Chi Minh City to enhance weather data collection and analysis. It supports up to 5 weather stations, with potential scalability to 10-15, utilizing Raspberry Pi edge devices with ESP32 sensors to transmit data via MQTT. The platform leverages AWS Serverless services to deliver real-time monitoring, predictive analytics, and cost efficiency, with access restricted to 5 lab members via Amazon Cognito.
+The **Smart Parking System** is designed to address modern parking management challenges by optimizing spot discovery and automating vehicle entry/exit recognition. The platform combines Artificial Intelligence (AI/Computer Vision) with robust AWS Cloud infrastructure, featuring Automatic Number Plate Recognition (ANPR), real-time occupancy monitoring, and centralized management. By leveraging AWS Serverless & Containerization services (Amazon RDS PostgreSQL, Amazon ECS Fargate, Amazon ECR, Amazon CloudFront, and AWS Amplify), the system ensures high availability, flexible scalability, and operational cost optimization without relying on expensive Load Balancers.
 
 ### 2. Problem Statement
-### What’s the Problem?
-Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
+*Current Problem*  
+Traditional parking lots face significant limitations:
+- **Manual Collection & Operations**: Drivers spend excessive time hunting for vacant spots, creating internal traffic congestion.
+- **Lack of Real-time Visibility**: Facility managers lack real-time insights into parking occupancy and vehicle flow metrics.
+- **Revenue Leakage Risk & High Labor Costs**: Entry/exit control relies on paper tickets or manual RFID cards, prone to human error and fraud.
 
-### The Solution
-The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
+*Solution*  
+The Smart Parking System enables users to pre-register vacant spots, generate reservation QR codes, and pay in advance. The system utilizes AI (Computer Vision) to automatically scan and recognize license plates and QR codes at entry/exit gates.
+- **Backend & Database**: Containerized using Docker, images stored on Amazon ECR, and executed on Serverless Amazon ECS Fargate. Secure transactional and vehicle data stored in Amazon RDS PostgreSQL.
+- **Content Delivery & Frontend**: Amazon CloudFront CDN connects directly to the ECS Backend to minimize real-time data transmission latency; AWS Amplify hosts a Fullstack Web Application (Next.js/React) allowing drivers and managers to access dashboards anytime, anywhere.
+- **Security**: Granular access management with AWS IAM and network protection via Security Groups. (This security setup is for demonstration purposes; production deployments can utilize higher-level security services such as AWS WAF, etc.)
 
-### Benefits and Return on Investment
-The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
+*Benefits and Return on Investment (ROI)*  
+- Reduces vehicle parking spot search time by 60%.
+- Automates 90% of entry/exit gate controls, reducing parking facility labor overhead.
+- Optimizes infrastructure costs by eliminating unnecessary Load Balancers (ALB) and adopting AWS Pay-as-you-go / Serverless billing models.
+- Estimated Return on Investment (ROI) timeframe within 6 to 12 months.
 
 ### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
+The system adopts a modern architecture integrating Edge AI and AWS Cloud Services for real-time parking data processing:
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+![Platform Architecture](/images/2-Proposal/FINAL_ARCHITECTURE.png)
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+*AWS Services Used*  
+- **AWS CLI & IAM**: Command-line administration and secure access management adhering to Least Privilege principles.
+- **Amazon RDS (PostgreSQL)**: Managed relational database storing license plate logs, entry/exit timestamps, and spot availability status.
+- **Amazon ECR (Elastic Container Registry)**: Secure storage and management of Docker Container Images.
+- **Amazon ECS (AWS Fargate)**: Serverless container orchestration and execution for backend services without server management.
+- **Amazon CloudFront**: Global Content Delivery Network (CDN) pointing directly to ECS Services, accelerating API responses & real-time data streaming.
+- **AWS Amplify**: Fullstack Web Frontend hosting and automated CI/CD deployment pipelines.
 
-### AWS Services Used
-- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
-- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
-- **Amazon API Gateway**: Facilitates web app communication.
-- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
-- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
-- **AWS Amplify**: Hosts the Next.js web interface.
-- **Amazon Cognito**: Secures access for lab users.
-
-### Component Design
-- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
-- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
-- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
-- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
-- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
-- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
+*Component Design*  
+- **Cameras & AI Processing**: Entry/exit gate cameras capture video streams; AI models extract license plate numbers & vacant spot status.
+- **Backend Ingestion & Processing**: Amazon CloudFront routes API requests directly to ECS Fargate Tasks for business logic execution.
+- **Data Storage**: Amazon RDS PostgreSQL stores transactional logs; Amazon ECR stores application images.
+- **User Dashboard**: AWS Amplify provides real-time web interface maps for customers and facility operators.
 
 ### 4. Technical Implementation
-**Implementation Phases**
-This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
-- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
-- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
-- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
-- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
+*Implementation Phases*  
+1. **Research & Architecture Design**: Evaluate AI license plate recognition models and design AWS cloud architecture (Month 1).
+2. **Container Build & Packaging**: Build backend application logic, containerize Docker Images, and push to Amazon ECR (Month 1 - Month 2).
+3. **AWS Cloud Infrastructure Provisioning**: Deploy RDS PostgreSQL, VPC, ECS Fargate Clusters, CloudFront CDN, and AWS Amplify (Month 2).
+4. **End-to-End Integration & Testing**: Connect end-to-end data pipelines from Camera/AI -> ECS Backend -> RDS Database -> Amplify Frontend (Month 2 - Month 3).
 
-**Technical Requirements**
-- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
-- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
+*Technical Requirements*  
+- **Edge AI Infrastructure**: Computer Vision models (YOLO/OCR) optimized for edge deployment or central inference servers.
+- **AWS Cloud Infrastructure**: Operating proficiency in AWS CLI, Docker, Amazon ECR, Amazon ECS Fargate, Amazon RDS PostgreSQL, CloudFront CDN, and AWS Amplify.
 
-### 5. Timeline & Milestones
-**Project Timeline**
-- Pre-Internship (Month 0): 1 month for planning and old station review.
-- Internship (Months 1-3): 3 months.
-    - Month 1: Study AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Implement, test, and launch.
-- Post-Launch: Up to 1 year for research.
+### 5. Roadmap & Milestones
+- **Phase 1 (Weeks 1 - 4)**: AWS core fundamentals, IAM security governance, VPC setup & Amazon RDS PostgreSQL database initialization.
+- **Phase 2 (Weeks 5 - 7)**: Docker containerization, ECR pushing, ECS Fargate cluster deployment, CloudFront & AWS Amplify integration.
+- **Phase 3 (Weeks 8 - 9)**: Workshop project peak execution, end-to-end Smart Parking System integration.
+- **Phase 4 (Weeks 10 - 12)**: Security hardening, Cost Optimization assessment, and final report compilation.
 
 ### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
+Infrastructure costs calculated via [AWS Pricing Calculator](https://calculator.aws/):
 
-### Infrastructure Costs
-- AWS Services:
-    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
-    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
-    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
-    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
-    - Amazon API Gateway: $0.01/month (2,000 requests).
-    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
-    - AWS Glue Crawlers: $0.07/month (1 crawler).
-    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
+*Estimated Monthly AWS Infrastructure Costs:*
+- **Amazon RDS PostgreSQL (db.t4g.micro / Free Tier)**: ~$14.50/month ($0.00 under AWS Free Tier).
+- **Amazon ECS Fargate (0.25 vCPU, 0.5 GB RAM)**: ~$9.00/month.
+- **Amazon ECR (5 GB Container Image Storage)**: ~$0.50/month.
+- **Amazon CloudFront (10 GB Data Transfer Out)**: ~$0.85/month.
+- **AWS Amplify (Hosting & Build time)**: ~$1.50/month.
+- **Route 53 & Domain Name**: ~$1.00/month.
 
-Total: $0.7/month, $8.40/12 months
-
-- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
+*Total Estimated AWS Cost*: **~$27.35/month** (Estimated < $10.00/month when applying AWS Free Tier limits and eliminating ALB overhead).
 
 ### 7. Risk Assessment
-#### Risk Matrix
-- Network Outages: Medium impact, medium probability.
-- Sensor Failures: High impact, low probability.
-- Cost Overruns: Medium impact, low probability.
+*Risk Matrix*  
+- **Internet Network Disruption**: Impact High, Probability Medium.
+- **AI Recognition Errors (Dim lighting/blurred plates)**: Impact Medium, Probability Medium.
+- **AWS Cost Budget Overrun**: Impact Medium, Probability Low.
 
-#### Mitigation Strategies
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Regular checks and spares.
-- Cost: AWS budget alerts and optimization.
+*Mitigation Strategies*  
+- **Network**: Implement local data caching on edge devices during temporary internet outages.
+- **AI**: Combine image preprocessing and allow manual operator verification on Dashboard when AI confidence < 85%.
+- **Cost**: Configure AWS Budgets alerts when expenditure exceeds 80% of projected thresholds.
 
-#### Contingency Plans
-- Revert to manual methods if AWS fails.
-- Use CloudFormation for cost-related rollbacks.
+*Contingency Plan*  
+- Use AWS CloudFormation / AWS CDK to rapidly recreate infrastructure in case of disaster recovery events.
+- Switch to manual license plate entry on Web Dashboard if hardware cameras experience failure.
 
 ### 8. Expected Outcomes
-#### Technical Improvements: 
-Real-time data and analytics replace manual processes.  
-Scalable to 10-15 stations.
-#### Long-term Value
-1-year data foundation for AI research.  
-Reusable for future projects.
+*Technical Improvements*: Complete automation of real-time parking recognition and management workflows. Streamlined Serverless cloud architecture eliminating ALB to optimize operational costs.  
+*Long-term Value*: Provides standardized data feeds for urban traffic analysis, optimizes parking operating expenses, and elevates user experience.
+
+### 9. Demo of Achieved Results
+
+**Menu-login Interface**
+
+![Menu-login](/images/2-Proposal/menu_login.png)
+
+**Booking Interface**
+
+![Booking](/images/2-Proposal/menu_booking.png)
+
+**Admin Interface**
+
+![Admin](/images/2-Proposal/menu_admin.png)
+
+**VNPay Payment Interface**
+
+![VNPay1](/images/2-Proposal/vnp1.png)
+
+![VNPay2](/images/2-Proposal/vnp2.png)
