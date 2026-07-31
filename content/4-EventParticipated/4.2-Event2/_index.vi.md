@@ -1,125 +1,79 @@
 ---
-title: "Event 2"
+title: "Event 2: Seminar AI From Scratch"
 date: 2024-01-01
-weight: 1
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+# Báo cáo Thu hoạch “Seminar AI From Scratch”
 
 ### Mục Đích Của Sự Kiện
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+Seminar "AI From Scratch" được tổ chức dành cho sinh viên và cộng đồng phát triển phần mềm nhằm mang đến góc nhìn toàn diện về quy trình ứng dụng Trí tuệ nhân tạo (AI), Học máy (Machine Learning) và Generative AI trên nền tảng AWS. Sự kiện giúp người tham dự nắm vững từ các dịch vụ AI Managed Services dựng sẵn, luồng kiến trúc xây dựng AI Agent đa ngôn ngữ, quy trình MLOps với Amazon SageMaker cho đến trải nghiệm ứng dụng Amazon Bedrock tạo Chatbot thông minh và tham gia trò chơi tương tác điều khiển bằng giọng nói.
 
 ### Danh Sách Diễn Giả
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+- **Nguyễn Tuấn Thịnh** - DevOps/Cloud Engineer, AWS Vietnam
+- **Nguyễn Công Minh** - DevOps Engineer, AWS Vietnam
+- **Thầy Mai Hoàng Đỉnh** - Giảng viên IA, Trường Đại học FPT TP.HCM (Giảng viên phụ trách chuyên môn)
+- **Đội ngũ Chuyên viên Kỹ thuật** - Đại diện AWS Vietnam
 
 ### Nội Dung Nổi Bật
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+#### 1. Hệ sinh thái AWS AI Managed Services & Quy trình xây dựng AI Agent
+- **Giới thiệu các dịch vụ AI chuyên dụng**: Khám phá bộ công cụ AI xử lý đa phương tiện qua API gồm:
+  - *Amazon Transcribe*: Chuyển đổi giọng nói thành văn bản (Speech-to-Text).
+  - *Amazon Translate*: Dịch thuật đa ngôn ngữ tự động.
+  - *Amazon Comprehend*: Phân tích cảm xúc, trích xuất chủ đề và từ khóa.
+  - *Amazon Lex*: Xử lý ngôn ngữ tự nhiên và nhận diện ý định hội thoại (Chatbot/Voicebot).
+  - *Amazon Polly*: Chuyển đổi văn bản thành giọng đọc tự nhiên (Text-to-Speech).
+  - *Amazon Textract*: Trích xuất dữ liệu và bóc tách tài liệu thông minh (OCR).
+  - *Amazon Rekognition*: Nhận diện hình ảnh, phân tích khuôn mặt và phát hiện lỗi sản phẩm.
+- **Kiến trúc luồng 6 bước xây dựng AI Agent hỗ trợ khách hàng đa ngôn ngữ**:
+  1. *Transcribe*: Tiếp nhận cuộc gọi và chuyển giọng nói sang văn bản.
+  2. *Translate*: Dịch ngôn ngữ sang dạng chuẩn hóa.
+  3. *Comprehend*: Phân tích sắc thái cảm xúc và chủ đề cuộc gọi.
+  4. *Lex*: Nhận diện ý định và các thông tin (Intent & Slots).
+  5. *Backend Integration*: Gọi API nghiệp vụ và truy vấn CSDL.
+  6. *Polly*: Phản hồi khách hàng bằng giọng nói tự nhiên.
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+#### 2. Xây dựng và Huấn luyện mô hình ML với Amazon SageMaker
+- Hướng dẫn toàn diện quy trình MLOps end-to-end: Chuẩn bị và làm sạch dữ liệu, chọn lựa thuật toán huấn luyện mô hình tùy chỉnh, tự động tinh chỉnh tham số (Hyperparameter Tuning) và triển khai các điểm cuối phục vụ dự đoán thời gian thực (Real-time Inference Endpoints) trên Amazon SageMaker.
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+#### 3. Khai phá Generative AI & Triển khai Chatbot với Amazon Bedrock
+- Giới thiệu dịch vụ Amazon Bedrock cho phép truy cập an toàn vào các mô hình nền tảng lớn (Foundation Models) như Anthropic Claude, Meta Llama. Hướng dẫn kỹ thuật Prompt Engineering, tích hợp RAG (Retrieval-Augmented Generation) để tạo ra các Chatbot thông minh xử lý tri thức nội bộ cho doanh nghiệp.
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
-
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
-
-#### Domain-Driven Design (DDD)
-
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
-
-#### Event-Driven Architecture
-
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
-
-#### Compute Evolution
-
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
-
-#### Amazon Q Developer
-
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+#### 4. Trải nghiệm Game Demo tương tác bằng Giọng nói (Voice-Controlled Game)
+- Trực tiếp trải nghiệm trò chơi demo sáng tạo do các diễn giả AWS xây dựng. Game sử dụng tích hợp kết hợp giữa Amazon Transcribe và Amazon Lex, cho phép người chơi phát lệnh bằng giọng nói trực tiếp qua micro để điều khiển nhân vật di chuyển và thực hiện hành động theo thời gian thực.
 
 ### Những Gì Học Được
 
 #### Tư Duy Thiết Kế
-
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+- **Tư duy phát triển ứng dụng AI-First**: Nắm vững phương pháp kết hợp các dịch vụ AI sẵn có qua API để rút ngắn thời gian phát triển sản phẩm từ hàng tháng xuống còn vài ngày.
+- **Tư duy thiết kế Agent đa kênh**: Thấu hiểu cách phối hợp linh hoạt giữa xử lý giọng nói, dịch thuật, phân tích cảm xúc và truy vấn CSDL backend.
 
 #### Kiến Trúc Kỹ Thuật
-
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+- **Chuẩn hóa kiến trúc AI Agent**: Nắm rõ 6 bước xử lý luồng thoại/văn bản và các thành phần bổ trợ như OCR (Textract) và Computer Vision (Rekognition).
+- **Lập trình Generative AI & MLOps**: Thấu hiểu cơ chế hoạt động của Amazon Bedrock và quy trình triển khai mô hình học máy trên Amazon SageMaker.
 
 #### Chiến Lược Hiện Đại Hóa
-
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
+- Tận dụng điện toán đám mây để đơn giản hóa việc đưa các mô hình AI/ML phức tạp vào ứng dụng thực tế mà không cần đầu tư hạ tầng GPU đắt đỏ ban đầu.
 
 ### Ứng Dụng Vào Công Việc
 
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
+- **Tích hợp AI Services vào dự án**: Áp dụng các dịch vụ Amazon Transcribe, Polly và Lex để xây dựng tính năng tương tác giọng nói / Chatbot tự động cho ứng dụng.
+- **Nâng cấp giải pháp Web/Mobile**: Sử dụng Amazon Textract và Rekognition để tự động hóa quy trình bóc tách chứng từ và xác thực dữ liệu hình ảnh.
+- **Nghiên cứu Generative AI**: Thử nghiệm tích hợp Amazon Bedrock với CSDL để xây dựng trợ lý ảo tra cứu thông tin cho các đồ án tiếp theo.
 
 ### Trải nghiệm trong event
 
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
-
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
-
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
-
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
-
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
-
-#### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
+Buổi Seminar "AI From Scratch" tại Thư viện FPTU đã mang lại một không gian học tập vô cùng sôi nổi và bổ ích. Trải nghiệm ấn tượng nhất là phần chơi game điều khiển bằng giọng nói cuối buổi cùng sự hướng dẫn tận tình, gần gũi từ hai anh Nguyễn Tuấn Thịnh, Nguyễn Công Minh và Thầy Mai Hoàng Đỉnh, giúp các khái niệm AI/ML trở nên trực quan và dễ tiếp thu hơn bao giờ hết.
 
 #### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+
+![Hình ảnh Seminar AI From Scratch 1](/images/4-Events/Event2/event2_1.jpeg)
+![Hình ảnh Seminar AI From Scratch 2](/images/4-Events/Event2/event2_2.jpeg)
+![Hình ảnh Seminar AI From Scratch 3](/images/4-Events/Event2/event2_3.jpeg)
+
+> Sự kiện đã mở ra những góc nhìn công nghệ mới mẻ, giúp em tự tin hơn trong việc khám phá và ứng dụng các dịch vụ AI hàng đầu của AWS vào dự án học tập và định hướng nghề nghiệp tương lai.

@@ -8,9 +8,9 @@ pre: " <b> 3.3. </b> "
 
 # AWS AI/ML Services | Tích hợp Trí tuệ nhân tạo vào ứng dụng với Amazon SageMaker & AWS AI Services
 
-Bài viết khám phá quy trình xây dựng, huấn luyện và tích hợp các mô hình Trí tuệ nhân tạo (AI) và Học máy (Machine Learning) vào ứng dụng bằng hệ sinh thái dịch vụ AWS AI/ML và nền tảng Amazon SageMaker.
+![AWS AI ML Services](/images/3-BlogsPosted/3.jpeg)
 
-![Post3](/images/3-BlogsPosted/3.jpeg)
+Bài viết khám phá quy trình xây dựng, huấn luyện và tích hợp các mô hình Trí tuệ nhân tạo (AI) và Học máy (Machine Learning) vào ứng dụng bằng hệ sinh thái dịch vụ AWS AI/ML và nền tảng Amazon SageMaker.
 
 Các điểm chính cần nắm:
 

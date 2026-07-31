@@ -8,9 +8,9 @@ pre: " <b> 3.1. </b> "
 
 # AWS Reliability & DR | Building Disaster Recovery Strategies and Distributed Networking on AWS
 
-This article explores cloud Disaster Recovery (DR) solutions on AWS designed to minimize critical RTO (Recovery Time Objective) and RPO (Recovery Point Objective) metrics for enterprise systems by combining AWS Elastic Disaster Recovery (AWS DRS) and AWS Transit Gateway.
+![AWS Reliability & Disaster Recovery](/images/3-BlogsPosted/1.jpeg)
 
-![Post1](/images/3-BlogsPosted/1.jpeg)
+This article explores cloud Disaster Recovery (DR) solutions on AWS designed to minimize critical RTO (Recovery Time Objective) and RPO (Recovery Point Objective) metrics for enterprise systems by combining AWS Elastic Disaster Recovery (AWS DRS) and AWS Transit Gateway.
 
 Key points to know:
 
@@ -21,3 +21,5 @@ Key points to know:
 * **Standard 3-Step Workflow**: Install DRS Agent -> Configure Launch Settings -> Perform periodic DR Drills without impacting production environments.
 
 This DR framework enables enterprises to proactively manage infrastructure disruptions and streamline recovery drills for SysAdmin teams.
+
+* **Detailed Guide Link**: [Disaster Recovery with AWS Elastic Disaster Recovery | The First Cloud Journey](https://cloudjourney.awsstudygroup.com/)

@@ -8,9 +8,9 @@ pre: " <b> 3.3. </b> "
 
 # AWS AI/ML Services | Integrating Artificial Intelligence into Applications with Amazon SageMaker & AWS AI Services
 
-This article explores end-to-end workflows for building, training, and integrating Artificial Intelligence (AI) and Machine Learning (ML) capabilities into applications using AWS AI/ML services and Amazon SageMaker.
+![AWS AI ML Services](/images/3-BlogsPosted/3.jpeg)
 
-![Post3](/images/3-BlogsPosted/3.jpeg)
+This article explores end-to-end workflows for building, training, and integrating Artificial Intelligence (AI) and Machine Learning (ML) capabilities into applications using AWS AI/ML services and Amazon SageMaker.
 
 Key points to know:
 

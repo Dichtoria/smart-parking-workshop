@@ -8,9 +8,9 @@ pre: " <b> 3.2. </b> "
 
 # Amazon EventBridge Scheduler | A Compact yet Powerful Service for AWS Projects
 
-This article shares hands-on experience utilizing **Amazon EventBridge Scheduler** to automate time-based tasks on AWS without managing traditional server-based Cron Jobs.
+![Amazon EventBridge Scheduler](/images/3-BlogsPosted/2.jpeg)
 
-![Post2](/images/3-BlogsPosted/2.jpeg)
+This article shares hands-on experience utilizing **Amazon EventBridge Scheduler** to automate time-based tasks on AWS without managing traditional server-based Cron Jobs.
 
 Key points to know:
 

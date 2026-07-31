@@ -8,9 +8,9 @@ pre: " <b> 3.2. </b> "
 
 # Amazon EventBridge Scheduler | Một dịch vụ nhỏ nhưng rất hữu ích khi làm project trên AWS
 
-Bài viết chia sẻ trải nghiệm sử dụng **Amazon EventBridge Scheduler** để tự động hóa các tác vụ lập lịch theo thời gian trên AWS mà không cần khởi tạo hay quản lý máy chủ Cron Job thủ công.
+![Amazon EventBridge Scheduler](/images/3-BlogsPosted/2.jpeg)
 
-![Post2](/images/3-BlogsPosted/2.jpeg)
+Bài viết chia sẻ trải nghiệm sử dụng **Amazon EventBridge Scheduler** để tự động hóa các tác vụ lập lịch theo thời gian trên AWS mà không cần khởi tạo hay quản lý máy chủ Cron Job thủ công.
 
 Các điểm chính cần nắm:
 

@@ -1,39 +1,36 @@
 ---
-title: "Self-Assessment"
+title: "Self-Evaluation"
 date: 2024-01-01
 weight: 6
 chapter: false
 pre: " <b> 6. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+Throughout my internship at **AWS Vietnam (First Cloud AI Journey Program - FCAJ)** from **May 26, 2026** to **August 11, 2026**, I had the privilege to learn, practice, and apply academic knowledge to real-world engineering environments.
 
-During my internship at **[Company/Organization Name]** from **[start date]** to **[end date]**, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  
-I participated in **[briefly describe the main project or task]**, through which I improved my skills in **[list skills: programming, analysis, reporting, communication, etc.]**.  
+I participated in developing the **Smart Parking System integrated with AI & AWS Cloud**, improving core technical competencies such as: Serverless/Container cloud architecture design, infrastructure security optimization, deployment pipeline automation, analytical problem-solving, and cross-team collaboration.
 
-In terms of work ethic, I always strived to complete tasks well, complied with workplace regulations, and actively engaged with colleagues to improve work efficiency.
+Regarding work ethic, I consistently strived to complete assigned tasks on schedule, adhered strictly to corporate regulations, proactively learned emerging technologies, and actively engaged with mentors and peers to elevate work quality.
 
-To objectively reflect on my internship period, I would like to evaluate myself based on the following criteria:
+To objectively reflect upon my internship progress, I evaluate my performance based on the criteria below:
 
-| No. | Criteria                            | Description                                                                                      | Good | Fair | Average |
-| --- | ----------------------------------- | ------------------------------------------------------------------------------------------------ | ---- | ---- | ------- |
-| 1   | **Professional knowledge & skills** | Understanding of the field, applying knowledge in practice, proficiency with tools, work quality | ✅    | ☐    | ☐       |
-| 2   | **Ability to learn**                | Ability to absorb new knowledge and learn quickly                                                | ☐    | ✅    | ☐       |
-| 3   | **Proactiveness**                   | Taking initiative, seeking out tasks without waiting for instructions                            | ✅    | ☐    | ☐       |
-| 4   | **Sense of responsibility**         | Completing tasks on time and ensuring quality                                                    | ✅    | ☐    | ☐       |
-| 5   | **Discipline**                      | Adhering to schedules, rules, and work processes                                                 | ☐    | ☐    | ✅       |
-| 6   | **Progressive mindset**             | Willingness to receive feedback and improve oneself                                              | ☐    | ✅    | ☐       |
-| 7   | **Communication**                   | Presenting ideas and reporting work clearly                                                      | ☐    | ✅    | ☐       |
-| 8   | **Teamwork**                        | Working effectively with colleagues and participating in teams                                   | ✅    | ☐    | ☐       |
-| 9   | **Professional conduct**            | Respecting colleagues, partners, and the work environment                                        | ✅    | ☐    | ☐       |
-| 10  | **Problem-solving skills**          | Identifying problems, proposing solutions, and showing creativity                                | ☐    | ✅    | ☐       |
-| 11  | **Contribution to project/team**    | Work effectiveness, innovative ideas, recognition from the team                                  | ✅    | ☐    | ☐       |
-| 12  | **Overall**                         | General evaluation of the entire internship period                                               | ✅    | ☐    | ☐       |
+| No. | Criteria | Description | Good | Fair | Average |
+| --- | --- | --- | --- | --- | --- |
+| 1 | **Technical Knowledge & Skills** | Understanding AWS ecosystem, applying knowledge to real projects, code quality | ✅ | ☐ | ☐ |
+| 2 | **Learning Agility** | Rapidly grasping new technologies (Generative AI, ECS Fargate, CloudFront) | ✅ | ☐ | ☐ |
+| 3 | **Proactiveness** | Independently researching solutions, taking ownership, proposing architectural enhancements | ✅ | ☐ | ☐ |
+| 4 | **Sense of Responsibility** | Delivering tasks on schedule, ensuring cloud resource safety and security | ✅ | ☐ | ☐ |
+| 5 | **Discipline** | Complying with working hours, security policies, and cloud credential guidelines | ✅ | ☐ | ☐ |
+| 6 | **Growth Mindset** | Actively receptive to feedback from Mentors and Academic Advisors | ✅ | ☐ | ☐ |
+| 7 | **Communication** | Articulately presenting technical concepts, transparently reporting progress | ☐ | ✅ | ☐ |
+| 8 | **Teamwork Collaboration** | Collaborating effectively with team members, assisting peers in debugging | ✅ | ☐ | ☐ |
+| 9 | **Professional Conduct** | Respecting corporate culture, workplace ethics, and AWS guidelines | ✅ | ☐ | ☐ |
+| 10 | **Problem-Solving Mindset** | Identifying technical bugs, diagnosing root causes, proposing optimal fixes | ☐ | ✅ | ☐ |
+| 11 | **Contribution to Project** | Successfully building complete Workshop modules, contributing quality documentation | ✅ | ☐ | ☐ |
+| 12 | **Overall Evaluation** | Comprehensive assessment of growth across the internship journey | ✅ | ☐ | ☐ |
 
-### Needs Improvement
+### Personal Improvement Goals
 
-* Strengthen discipline and strictly comply with the rules and regulations of the company or any organization  
-* Improve problem-solving thinking  
-* Enhance communication skills in both daily interactions and professional contexts, including handling situations effectively
+* **Enhance Technical Communication**: Refine English technical presentation skills to communicate complex architecture solutions fluently and confidently.
+* **Elevate Problem-Solving Skills**: Proactively approach large-scale distributed systems, sharpening log analysis and deep debugging capabilities.
+* **Achieve AWS Certifications**: Invest dedicated study time toward earning the AWS Certified Solutions Architect Associate credential in the near future.

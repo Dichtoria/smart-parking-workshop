@@ -5,40 +5,45 @@ weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
->Tại đây bạn có thể tự do đóng góp ý kiến cá nhân về những trải nghiệm khi tham gia chương trình First Cloud AI Journey, giúp team FCAJ cải thiện những vấn đề còn thiếu sót dựa trên các hạng mục sau:
+Trang tổng hợp những chia sẻ chân thành, cảm nhận cá nhân và đóng góp ý kiến sau trải nghiệm thực tập quý báu tại chương trình **First Cloud AI Journey (FCAJ)** – AWS Việt Nam:
 
 ### Đánh giá chung
 
 **1. Môi trường làm việc**  
-Môi trường làm việc rất thân thiện và cởi mở. Các thành viên trong FCAJ luôn sẵn sàng hỗ trợ khi mình gặp khó khăn, kể cả ngoài giờ làm việc. Không gian làm việc gọn gàng, thoải mái, giúp mình tập trung tốt hơn. Tuy nhiên, mình nghĩ có thể bổ sung thêm một số buổi giao lưu hoặc team bonding để mọi người hiểu nhau hơn.
+Môi trường làm việc tại AWS Việt Nam vô cùng chuyên nghiệp, hiện đại, thân thiện và cởi mở. Không gian làm việc sáng tạo tại Bitexco Financial Tower tạo cảm hứng làm việc mỗi ngày. Các thành viên trong cộng đồng FCAJ và đội ngũ AWS luôn sẵn sàng hỗ trợ, lắng nghe và đồng hành cùng thực tập sinh trong suốt quá trình triển khai dự án.
 
-**2. Sự hỗ trợ của mentor / team admin**  
-Mentor hướng dẫn rất chi tiết, giải thích rõ ràng khi mình chưa hiểu và luôn khuyến khích mình đặt câu hỏi. Team admin hỗ trợ các thủ tục, tài liệu và tạo điều kiện để mình làm việc thuận lợi. Mình đánh giá cao việc mentor cho phép mình thử và tự xử lý vấn đề thay vì chỉ đưa đáp án.
+**2. Sự hỗ trợ của Mentor & Đội ngũ FCAJ Admin**  
+Các anh/chị Mentor với chuyên môn cao luôn hướng dẫn tận tình, định hướng giải pháp kỹ thuật theo các tiêu chuẩn thực hành tốt nhất (AWS Well-Architected Framework). Mentor luôn khuyến khích sinh viên tự tư duy giải quyết vấn đề thay vì đưa ra đáp án có sẵn. Đội ngũ Admin hỗ trợ nhanh chóng các thủ tục, tài khoản lab và tạo mọi điều kiện thuận lợi nhất để sinh viên thực hành.
 
 **3. Sự phù hợp giữa công việc và chuyên ngành học**  
-Công việc mình được giao phù hợp với kiến thức mình đã học ở trường, đồng thời mở rộng thêm những mảng mới mà mình chưa từng được tiếp cận. Nhờ vậy, mình vừa củng cố kiến thức nền tảng, vừa học thêm kỹ năng thực tế.
+Nội dung thực tập và dự án Workshop xây dựng Hệ thống bãi đỗ xe thông minh (Smart Parking System) hoàn toàn phù hợp với chuyên ngành Kỹ thuật Phần mềm / Công nghệ Thông tin tại Trường Đại học FPT. Dự án kết hợp hài hòa giữa lập trình web, thị giác máy tính AI và các dịch vụ đám mây tiên tiến trên AWS.
 
 **4. Cơ hội học hỏi & phát triển kỹ năng**  
-Trong quá trình thực tập, mình học được nhiều kỹ năng mới như sử dụng công cụ quản lý dự án, kỹ năng làm việc nhóm, và cả cách giao tiếp chuyên nghiệp trong môi trường công ty. Mentor cũng chia sẻ nhiều kinh nghiệm thực tế giúp mình định hướng tốt hơn cho sự nghiệp.
+Chương trình mang lại giá trị học tập vượt trội: từ kỹ năng làm chủ hệ sinh thái AWS (ECR, ECS Fargate, CloudFront, Amplify, RDS), tư duy thiết kế kiến trúc Serverless/Container, đến các kỹ năng mềm quan trọng như quản lý thời gian, thuyết trình kỹ thuật, làm việc nhóm và giao tiếp chuyên nghiệp.
 
 **5. Văn hóa & tinh thần đồng đội**  
-Văn hóa công ty rất tích cực: mọi người tôn trọng lẫn nhau, làm việc nghiêm túc nhưng vẫn vui vẻ. Khi có dự án gấp, mọi người cùng nhau cố gắng, hỗ trợ không phân biệt vị trí. Điều này giúp mình cảm thấy mình là một phần của tập thể, dù chỉ là thực tập sinh.
+Văn hóa làm việc tôn trọng, chủ động và bình đẳng. Các thành viên trong nhóm luôn gắn kết, chia sẻ tri thức, hỗ trợ lẫn nhau vượt qua các giai đoạn khó khăn khi gặp bug kỹ thuật, tạo nên tinh thần đồng đội tuyệt vời.
 
-**6. Chính sách / phúc lợi cho thực tập sinh**  
-Công ty có hỗ trợ phụ cấp thực tập và tạo điều kiện về thời gian linh hoạt khi cần thiết. Ngoài ra, việc được tham gia các buổi đào tạo nội bộ là một điểm cộng lớn.
+**6. Chính sách & Cơ hội tham gia sự kiện**  
+Sinh viên được tham gia trực tiếp các buổi Seminar chuyên đề (GenAI, SageMaker, AI Agent, Bedrock) và các buổi Meet Up kết nối cộng đồng, được tài trợ tài nguyên AWS Credit để thực hành lab thực tế.
 
+---
 
-### Một số câu hỏi khác
-- Điều bạn **hài lòng nhất** trong thời gian thực tập?  
-- Điều bạn nghĩ công ty **cần cải thiện** cho các thực tập sinh sau?  
-- Nếu giới thiệu cho bạn bè, bạn có **khuyên họ thực tập ở đây không**? Vì sao?  
+### Trả lời các câu hỏi trải nghiệm
 
+- **Điều bạn hài lòng nhất trong thời gian thực tập?**  
+  Điều em hài lòng nhất là được trực tiếp thiết kế, triển khai một hệ thống thực tế trên hạ tầng đám mây AWS chuẩn Production, được học hỏi trực tiếp từ các chuyên gia AWS Solutions Architects và làm quen với văn hóa làm việc toàn cầu.
+
+- **Điều bạn nghĩ chương trình cần cải thiện cho các khóa thực tập sinh sau?**  
+  Chương trình có thể bổ sung thêm các buổi mảng thực hành chuyên sâu (Hands-on Lab) nâng cao về tối ưu chi phí (Cost Optimization) và bảo mật AWS WAF/Shield ở những tuần đầu để giúp sinh viên tiếp cận nhanh hơn.
+
+- **Nếu giới thiệu cho bạn bè, bạn có khuyên họ thực tập ở đây không? Vì sao?**  
+  Em chắc chắn 100% sẽ tiến cử chương trình FCAJ cho các bạn sinh viên khóa sau. Đây là môi trường thực tập lý tưởng nhất để trải nghiệm thực tế công nghệ Cloud & AI, giúp sinh viên bứt phá năng lực chuyên môn và định hình sự nghiệp tương lai.
+
+---
 
 ### Đề xuất & mong muốn
-- Bạn có đề xuất gì để cải thiện trải nghiệm trong kỳ thực tập?  
-- Bạn có muốn tiếp tục chương trình này trong tương lai?
-- Góp ý khác (tự do chia sẻ):
+
+- **Đề xuất cải thiện trải nghiệm**: Tổ chức thêm các hoạt động Team Building hoặc Hackathon nội bộ nhỏ giữa các nhóm FCAJ để tăng cường sự kết nối và trao đổi kỹ thuật.
+- **Mong muốn tương lai**: Em rất mong muốn tiếp tục có cơ hội đồng hành cùng AWS trong các chương trình cộng đồng, hội thảo chuyên đề và hướng tới mục tiêu trở thành một Cloud/DevOps Engineer chuyên nghiệp.

@@ -6,39 +6,37 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** for your report, including this warning.
-{{% /notice %}}
+During the internship at **First Cloud AI Journey (FCAJ)** – AWS Vietnam, I participated in professional technical events and community meetups, gaining practical cloud insights and expanding my professional network.
 
-> In this section, you should list and describe in detail the events you have participated in during your internship or work experience.  
-> 
-> Each event should be presented in the format Event 1, Event 2, Event 3…, along with the following details:
-> * Event name
-> * Date and time
-> * Location (if applicable)
-> * Your role in the event (attendee, event support, speaker, etc.)
-> * A brief description of the event’s content and main activities
-> * Outcomes or value gained (lessons learned, new skills, contribution to the team/project)
-> * This listing helps demonstrate your actual participation as well as the soft skills and experience you have gained from each event.
+### [Event 1 - Event Meet Up](4.1-event1/)
+&emsp;**Event Name:** Event Meet Up
 
-During my internship, I participated in two events. Each one was a memorable experience that provided new, interesting, and useful knowledge, along with gifts and wonderful moments.
+&emsp;**Date & Time:** 09:00 AM, May 30, 2026
 
-### [Event 1](4.1-Event1/)  
-&emsp;**Event Name:** GenAI-powered App-DB Modernization workshop  
+&emsp;**Location:** Floor 26, Bitexco Financial Tower, No. 02 Hai Trieu Street, Sai Gon Ward, Ho Chi Minh City
 
-&emsp;**Date & Time:** 09:00, August 13, 2025  
+&emsp;**Role:** Attendee
 
-&emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
+&emsp;**Summary:** Speaker shares on AWS cost management skills, Hackathon experience, building confidence, DevOps infrastructure foundations, and AI web integration.
 
-&emsp;**Role:** Attendee  
+### [Event 2 - Seminar "AI From Scratch"](4.2-event2/)
+&emsp;**Event Name:** Seminar "AI From Scratch"
 
----
+&emsp;**Date & Time:** 09:00 AM – 12:00 PM, Saturday, July 18, 2026
 
-### [Event 2](4.2-Event2/)  
-&emsp;**Event Name:** GenAI-powered App-DB Modernization workshop  
+&emsp;**Location:** Room LB 24 (Floor 2) - FPTU HCMC Library
 
-&emsp;**Date & Time:** 09:00, August 13, 2025  
+&emsp;**Role:** Attendee
 
-&emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
+&emsp;**Summary:** Exploration of AWS AI Managed Services (Rekognition, Textract, Transcribe, Lex, Polly), 6-step AI Agent architectures, SageMaker MLOps, Amazon Bedrock Generative AI, and a hands-on voice-controlled game demo.
 
-&emsp;**Role:** Attendee  
+### [Event 3 - Cloud Architect Final & Technical Sharing](4.3-event3/)
+&emsp;**Event Name:** Cloud Architect Final & Technical Sharing
+
+&emsp;**Date & Time:** 09:00 AM, July 11, 2026
+
+&emsp;**Location:** Floor 26, Bitexco Financial Tower, No. 02 Hai Trieu Street, Sai Gon Ward, Ho Chi Minh City
+
+&emsp;**Role:** Attendee
+
+&emsp;**Summary:** Cloud Architect competition final (KLKAT vs Ngu Dai Hiep) and deep technical sharing sessions on Web App security, SLA-driven monitoring, and AWS Cloud Practitioner certification strategies.
