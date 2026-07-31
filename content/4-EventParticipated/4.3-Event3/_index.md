@@ -57,6 +57,9 @@ The event commenced with an intense final competition between two outstanding te
 The Cloud Architect Final & Technical Sharing event offered an enriching learning experience. The synergy between the final competition and expert talks reinforced my cloud architecture design mindset, elevated web security awareness, and laid a clear path toward AWS certifications.
 
 #### Some event photos
-*Add your event photos here*
+
+![Event 3 Photo 1](/images/4-Events/Event3/event3_1.jpeg)
+![Event 3 Photo 2](/images/4-Events/Event3/event3_2.jpeg)
+![Event 3 Photo 3](/images/4-Events/Event3/event3_3.jpeg)
 
 > Overall, the event served as a major learning milestone, providing practical insights and inspiring my continuous journey in Cloud Computing.

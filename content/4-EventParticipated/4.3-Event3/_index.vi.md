@@ -42,7 +42,7 @@ Phần khai mạc sự kiện diễn ra đầy sôi động với trận tranh t
 #### Kiến Trúc Kỹ Thuật
 - **Bảo mật web đa lớp (Defense-in-Depth)**: Thấu hiểu nguyên lý triển khai các công cụ AWS Security Agent để chủ động phát hiện lỗ hổng và giám sát an toàn thông tin cho ứng dụng Web.
 
-#### Chiến Lược Hiện Đại Hóa & Phát Triển Cá Nhân
+#### Chiến Lược Hiện Đại Hóa & Phát Triển Bản Thân
 - **Phương pháp ôn luyện chứng chỉ AWS**: Nắm vững lộ trình chuẩn bị bài bản, kỹ năng tổng hợp tri thức kỹ thuật và chiến thuật phân bổ thời gian khi tham gia kỳ thi AWS Cloud Practitioner.
 - **Kỹ năng đúc kết tri thức**: Nâng cao năng lực quan sát, ghi chép nhanh và tổng hợp thông tin chuyên môn từ các buổi hội thảo kỹ thuật nâng cao.
 
@@ -57,6 +57,9 @@ Phần khai mạc sự kiện diễn ra đầy sôi động với trận tranh t
 Sự kiện Cloud Architect Final & Technical Sharing đã mang lại cho em một trải nghiệm học thuật vô cùng phong phú và thực tế. Sự kết hợp giữa không khí tranh tài nảy lửa của trận chung kết kiến trúc và các bài tham luận sâu sắc từ các diễn giả đã giúp em củng cố vững chắc tư duy thiết kế đám mây, nâng cao nhận thức về bảo mật Web và định hình rõ ràng con đường chinh phục các chứng chỉ AWS.
 
 #### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của bạn tại đây
+
+![Hình ảnh tham gia sự kiện Event 3 - 1](/images/4-Events/Event3/event3_1.jpeg)
+![Hình ảnh tham gia sự kiện Event 3 - 2](/images/4-Events/Event3/event3_2.jpeg)
+![Hình ảnh tham gia sự kiện Event 3 - 3](/images/4-Events/Event3/event3_3.jpeg)
 
 > Sự kiện là điểm nhấn tri thức quan trọng, giúp em tích lũy thêm nhiều kinh nghiệm thực chiến giá trị và tiếp thêm nhiệt huyết trên hành trình phát triển sự nghiệp trong lĩnh vực Điện toán đám mây.
