@@ -39,18 +39,6 @@ Kiến trúc hạ tầng đám mây của hệ thống bao gồm các thành ph�
 
 ---
 
-### Mô hình luồng dữ liệu (Data Flow)
-
-```mermaid
-graph TD
-    User([Người dùng / Client App]) -->|1. Truy cập Web UI| Amplify[AWS Amplify Hosting]
-    User -->|2. Gọi API HTTPS| CDN[Amazon CloudFront CDN]
-    CDN -->|3. Forward Request Port 8000| ECS[Amazon ECS Fargate Container]
-    ECS -->|4. Pull Image| ECR[Amazon ECR Repository]
-    ECS -->|5. Truy vấn Data Port 5432| RDS[(Amazon RDS PostgreSQL)]
-    ECS -->|6. Thanh toán trực tuyến| VNPay[VNPay Payment Gateway]
-```
-
 ### Kết quả đạt được sau bài thực hành
 
 Sau khi hoàn thành bài Workshop này, bạn sẽ nắm vững:

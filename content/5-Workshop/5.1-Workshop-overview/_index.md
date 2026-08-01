@@ -39,18 +39,6 @@ The cloud infrastructure comprises core cloud components:
 
 ---
 
-### Data Flow Diagram
-
-```mermaid
-graph TD
-    User([User / Client App]) -->|1. Access Web UI| Amplify[AWS Amplify Hosting]
-    User -->|2. Call HTTPS API| CDN[Amazon CloudFront CDN]
-    CDN -->|3. Forward Request Port 8000| ECS[Amazon ECS Fargate Container]
-    ECS -->|4. Pull Image| ECR[Amazon ECR Repository]
-    ECS -->|5. Query Data Port 5432| RDS[(Amazon RDS PostgreSQL)]
-    ECS -->|6. Online Payment| VNPay[VNPay Payment Gateway]
-```
-
 ### Key Takeaways After Hands-on Workshop
 
 Upon completing this workshop, you will master:
