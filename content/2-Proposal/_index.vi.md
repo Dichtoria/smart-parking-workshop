@@ -118,3 +118,7 @@ Chi phí hạ tầng được tính toán dựa trên [AWS Pricing Calculator](h
 ![VNPay1](/images/2-Proposal/vnp1.png)
 
 ![VNPay2](/images/2-Proposal/vnp2.png)
+
+**Quét biển số**
+
+![Scan](/images/2-Proposal/scanning.png)
