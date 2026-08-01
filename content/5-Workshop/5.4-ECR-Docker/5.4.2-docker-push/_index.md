@@ -8,6 +8,12 @@ pre: " <b> 5.4.2. </b> "
 
 # Step 6: Package Docker & Push Image
 
+> **💡 Why containerize the application with Docker?**  
+> - **AI & Computer Vision Integration**: The Smart Parking System embeds automated license plate recognition (ANPR) AI modules utilizing OpenCV, Python, and Node.js dependencies. Manually installing complex Computer Vision libraries across traditional servers often leads to OS environment conflicts (Dependency Drift).  
+> - **Consistent Runtime ("Build Once, Run Anywhere")**: Docker encapsulates the backend source code, runtime, AI dependencies, and system configs into a **single unified Container Image**. This guarantees 100% execution consistency from local developer machines straight to AWS cloud infrastructure.
+
+---
+
 Package your Backend source code into a Docker image and push it directly to your ECR repository.
 
 #### Steps:

@@ -8,6 +8,12 @@ pre: " <b> 5.4.2. </b> "
 
 # Bước 6: Đóng gói Docker và Push Image
 
+> **💡 Tại sao chọn giải pháp đóng gói ứng dụng bằng Docker Container?**  
+> - **Tích hợp mô hình Trí tuệ nhân tạo (AI & Computer Vision)**: Ứng dụng Bãi đỗ xe thông minh kết hợp mô hình AI tự động nhận diện biển số xe (ANPR) sử dụng các thư viện như OpenCV, Python và Node.js. Việc cài đặt thủ công các thư viện AI phức tạp này trên server truyền thống rất dễ gây ra lỗi xung đột phiên bản (Dependency Drift).  
+> - **Tính đóng gói đồng nhất ("Build Once, Run Anywhere")**: Docker giúp gom toàn bộ mã nguồn Backend, môi trường chạy, các thư viện phụ thuộc AI và cấu hình vào trong **01 Container Image duy nhất**. Điều này đảm bảo ứng dụng chạy chính xác 100% từ môi trường Local cho đến khi triển khai lên đám mây AWS mà không sợ bị xung đột hệ điều hành hay thiếu thư viện.
+
+---
+
 Thực hiện đóng gói mã nguồn Backend thành Docker Image và đẩy trực tiếp lên kho lưu trữ ECR đã tạo.
 
 #### Các bước thực hiện:

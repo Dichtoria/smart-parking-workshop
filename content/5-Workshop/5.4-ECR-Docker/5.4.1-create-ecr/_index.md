@@ -8,6 +8,11 @@ pre: " <b> 5.4.1. </b> "
 
 # Step 5: Access Amazon ECR & Create Repository
 
+> **💡 Why use Amazon ECR (Elastic Container Registry)?**  
+> **Amazon ECR** is a fully managed private container registry deeply integrated with AWS. Using ECR securely stores versioned application container images, provides automated security vulnerability scanning, and enables low-latency image pulls directly into Amazon ECS Fargate within AWS private networking.
+
+---
+
 Amazon ECR stores your application Docker images before deployment to ECS.
 
 #### Steps:

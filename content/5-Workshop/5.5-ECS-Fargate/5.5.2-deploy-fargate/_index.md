@@ -8,6 +8,11 @@ pre: " <b> 5.5.2. </b> "
 
 # Step 8: Deploy & Run ECS Service
 
+> **💡 Why choose Amazon ECS Fargate (Serverless Containers)?**  
+> Operating backend services for a smart parking platform demands dynamic auto-scaling tailored to fluctuating vehicle entry/exit traffic. **AWS Fargate** provides a serverless container environment eliminating EC2 OS management, patching, and provisioning overhead. Fargate automatically handles compute scaling, task auto-recovery, and optimizes operational costs by charging strictly for active container consumption.
+
+---
+
 In this step, we create the Cluster and Service to run the Backend application on serverless Fargate infrastructure.
 
 #### 1. Create Server Cluster:

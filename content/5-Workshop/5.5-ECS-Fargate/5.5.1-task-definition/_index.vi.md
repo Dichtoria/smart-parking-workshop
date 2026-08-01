@@ -8,6 +8,11 @@ pre: " <b> 5.5.1. </b> "
 
 # Bước 7: Cấu hình Task Definition cho ECS
 
+> **💡 Tại sao cần cấu hình Task Definition?**  
+> **Task Definition** đóng vai trò như một bản thiết kế kiến trúc chuẩn hóa (Blueprint). Nó quy định chính xác số lượng vCPU, dung lượng RAM tối ưu cho container, định nghĩa các cổng mạng (Port 8000) và bảo mật truyền các biến môi trường (Database Host/User/Password) từ hệ thống vào ứng dụng một cách an toàn.
+
+---
+
 Task Definition đóng vai trò như một bản thiết kế, định nghĩa cách các Container của bạn sẽ chạy trên dịch vụ ECS (có thể chỉnh biến môi trường trực tiếp thông qua task).
 
 #### Các bước thực hiện:

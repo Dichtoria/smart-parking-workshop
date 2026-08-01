@@ -8,6 +8,11 @@ pre: " <b> 5.5.1. </b> "
 
 # Step 7: Configure Task Definition for ECS
 
+> **💡 Why configure an ECS Task Definition?**  
+> An **ECS Task Definition** serves as a standardized architectural blueprint. It defines exact container vCPU resources, allocated RAM, container network port mappings (Port 8000), and securely injects database credentials and environment variables into the running container.
+
+---
+
 A Task Definition functions as a blueprint defining how your containers run on the ECS service (environment variables can be configured directly through the task).
 
 #### Steps:

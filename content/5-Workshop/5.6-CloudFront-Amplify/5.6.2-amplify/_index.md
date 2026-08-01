@@ -8,6 +8,12 @@ pre: " <b> 5.6.2. </b> "
 
 # Step 10: Deploy Frontend with AWS Amplify
 
+> **💡 Why choose AWS Amplify Hosting?**  
+> - **Automated GitHub CI/CD Pipeline**: AWS Amplify links directly with your GitHub repository. Whenever code is committed to the `main` branch, Amplify automatically triggers the Build (`npm run build`) and Deploy pipeline without manual intervention.  
+> - **Optimized Web Hosting & Environment Governance**: Amplify serves compiled static React assets globally with built-in CDN acceleration, offering centralized and secure environment variable management (`VITE_API_URL`).
+
+---
+
 Finally, connect your source code from GitHub to deploy the user interface and link it with the Backend API.
 
 #### Steps:

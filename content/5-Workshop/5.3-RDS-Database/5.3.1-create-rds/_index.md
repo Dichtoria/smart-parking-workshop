@@ -8,6 +8,11 @@ pre: " <b> 5.3.1. </b> "
 
 # Step 3: Provision Amazon RDS (PostgreSQL)
 
+> **💡 Why use Amazon RDS (PostgreSQL)?**  
+> The Smart Parking System requires high relational data integrity (ACID compliance) for parking slot availability, user accounts, and VNPay online payment logs. **Amazon RDS (Relational Database Service)** automates complex database management tasks such as periodic backups, security updates, and storage auto-scaling without manual DB server maintenance.
+
+---
+
 The database is the most critical core component. We will utilize the RDS service to run PostgreSQL reliably.
 
 #### Steps:

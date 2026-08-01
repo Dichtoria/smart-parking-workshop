@@ -8,6 +8,11 @@ pre: " <b> 5.5.2. </b> "
 
 # Bước 8: Triển khai và Chạy ECS Service
 
+> **💡 Tại sao lựa chọn Amazon ECS Fargate (Serverless Container)?**  
+> Vận hành ứng dụng bãi đỗ xe đòi hỏi hệ thống co giãn linh hoạt theo lưu lượng xe vào/ra thực tế. **AWS Fargate** cung cấp môi trường Container Serverless không máy chủ — bạn không cần phải tốn thời gian quản lý, nâng cấp hay vá lỗi hệ điều hành EC2. AWS Fargate tự động mở rộng tài nguyên khi cao điểm, tự phục hồi Task khi gặp lỗi và giúp tối ưu 100% chi phí vận hành.
+
+---
+
 Trong bước này, chúng ta sẽ tạo Cluster và Service để vận hành ứng dụng Backend trên hạ tầng Fargate không máy chủ.
 
 #### 1. Tạo cụm máy chủ (Cluster):
@@ -42,7 +47,5 @@ Khi mục task hoàn thành, ta có thể lấy được địa chỉ Public IP 
 ![Public IP](/images/5-Workshop/5.5-ECS-Fargate/5.5.2-deploy-fargate/publicip_1.png)
 
 ![Public IP](/images/5-Workshop/5.5-ECS-Fargate/5.5.2-deploy-fargate/publicip_2.png)
-
-
 
 *(Khi đó là done backend nhé!)*

@@ -8,6 +8,11 @@ pre: " <b> 5.3.2. </b> "
 
 # Step 4: Configure Security Group for RDS
 
+> **💡 Why configure EC2 Security Groups?**  
+> An **EC2 Security Group** acts as a stateful virtual firewall controlling inbound and outbound network traffic. Scoping access strictly to PostgreSQL port `5432` protects the relational database from public port scanners and guarantees that only authorized backend services can connect.
+
+---
+
 Configuring security rules enables your local workstation and other AWS services to connect to the database.
 
 Once RDS displays the Available status, allow your local computer to connect:

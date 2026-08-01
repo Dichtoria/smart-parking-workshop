@@ -8,6 +8,12 @@ pre: " <b> 5.2. </b> "
 
 # Prerequisites & AWS CLI Setup
 
+> **💡 Why AWS IAM & AWS CLI?**  
+> - **AWS IAM**: Enforces the Principle of Least Privilege. Creating a dedicated IAM User (`parking-admin`) with scoped permissions instead of using the Root account secures cloud infrastructure against unauthorized modifications.  
+> - **AWS CLI v2**: Enables command-line automation. Configuring the CLI allows local development tools (Docker, Git scripts) to authenticate, build, and deploy cloud resources seamlessly without repetitive manual Console actions.
+
+---
+
 ### 1. System & Development Environment Requirements
 
 Before starting the hands-on workshop, ensure your local workstation meets the following tool and software version requirements:

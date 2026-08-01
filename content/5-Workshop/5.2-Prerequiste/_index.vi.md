@@ -8,6 +8,12 @@ pre: " <b> 5.2. </b> "
 
 # Yêu cầu chuẩn bị & Cấu hình AWS CLI
 
+> **💡 Tại sao chọn AWS IAM & AWS CLI?**  
+> - **AWS IAM**: Giúp tuân thủ nguyên tắc phân quyền tối thiểu (Least Privilege). Việc tạo một IAM User riêng biệt (`parking-admin`) cấp đúng các quyền cần thiết thay vì dùng tài khoản Root giúp bảo vệ an toàn tuyệt đối cho tài nguyên đám mây.  
+> - **AWS CLI v2**: Giúp tự động hóa công việc qua dòng lệnh. Việc cấu hình CLI giúp các công cụ local (như Docker, Git script) có thể trực tiếp tương tác, đóng gói và triển khai tài nguyên AWS một cách nhanh chóng mà không cần thao tác thủ công liên tục trên Console.
+
+---
+
 ### 1. Chuẩn bị Môi trường & Phần mềm Hệ thống
 
 Trước khi bắt đầu bài thực hành, hãy đảm bảo máy tính cá nhân của bạn đã cài đặt các công cụ và môi trường phiên bản tiêu chuẩn sau:

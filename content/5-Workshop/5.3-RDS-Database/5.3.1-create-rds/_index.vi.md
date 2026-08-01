@@ -8,6 +8,11 @@ pre: " <b> 5.3.1. </b> "
 
 # Bước 3: Khởi tạo Amazon RDS (PostgreSQL)
 
+> **💡 Tại sao sử dụng Amazon RDS (PostgreSQL)?**  
+> Hệ thống Bãi đỗ xe thông minh yêu cầu tính toàn vẹn dữ liệu cao (chuẩn ACID) đối với trạng thái chỗ đỗ, thông tin khách hàng và lịch sử giao dịch qua cổng VNPay. **Amazon RDS (Relational Database Service)** giúp tự động hóa toàn bộ việc quản trị CSDL như sao lưu định kỳ (Automated Backups), bảo trì hệ thống và mở rộng phần cứng linh hoạt mà không cần tự cài đặt hay vận hành server DB thủ công.
+
+---
+
 Cơ sở dữ liệu là thành phần quan trọng nhất. Chúng ta sẽ sử dụng dịch vụ RDS để vận hành PostgreSQL một cách ổn định.
 
 #### Các bước thực hiện:

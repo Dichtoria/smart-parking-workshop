@@ -8,6 +8,11 @@ pre: " <b> 5.4.1. </b> "
 
 # Bước 5: Truy cập Amazon ECR và Tạo Kho Lưu Trữ
 
+> **💡 Tại sao sử dụng Amazon ECR (Elastic Container Registry)?**  
+> **Amazon ECR** là kho lưu trữ Docker Image riêng tư (Private Container Registry) tích hợp sâu vào hệ sinh thái AWS. Sử dụng ECR giúp lưu trữ an toàn mã nguồn ứng dụng đã đóng gói, tự động quét lỗ hổng bảo mật (Vulnerability Scanning) và giúp cụm máy chủ ECS kéo (pull) Image về khởi chạy với độ trễ cực thấp trong cùng mạng nội bộ AWS.
+
+---
+
 Amazon ECR là nơi lưu trữ các Docker Image của ứng dụng trước khi được triển khai lên ECS.
 
 #### Các bước thực hiện:
@@ -30,4 +35,3 @@ Amazon ECR là nơi lưu trữ các Docker Image của ứng dụng trước khi
 7. Lúc này, AWS sẽ hiển thị một bảng Popup chứa 4 bước thực hiện tương ứng với 4 câu lệnh. Các câu lệnh này đã được AWS tự động điền sẵn ID Tài khoản AWS của bạn, Region và Tên Repository mà bạn vừa đặt.
 
 ![Create Repository](/images/5-Workshop/5.4-ECR-Docker/5.4.1-create-ecr/commands.png)
-

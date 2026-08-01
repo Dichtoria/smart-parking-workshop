@@ -8,6 +8,12 @@ pre: " <b> 5.6.2. </b> "
 
 # Bước 10: Triển khai Frontend với AWS Amplify
 
+> **💡 Tại sao lựa chọn AWS Amplify Hosting?**  
+> - **Tự động hóa quy trình CI/CD tích hợp GitHub**: AWS Amplify kết nối trực tiếp với kho mã nguồn GitHub. Mỗi khi đội ngũ phát triển Push code mới lên nhánh `main`, Amplify sẽ tự động chạy tiến trình Biên dịch (`npm run build`) và Triển khai (Deploy) bản cập nhật mới nhất mà không cần thao tác thủ công.  
+> - **Lưu trữ ứng dụng Web tĩnh tối ưu**: Amplify tự động tích hợp mạng lưới phân phối file tĩnh toàn cầu, giúp tải trang cực nhanh, đồng thời cung cấp giao diện quản lý biến môi trường (`VITE_API_URL`) tập trung và an toàn.
+
+---
+
 Cuối cùng, chúng ta sẽ kết nối mã nguồn từ GitHub để triển khai giao diện người dùng và liên kết với API Backend.
 
 #### Các bước thực hiện:

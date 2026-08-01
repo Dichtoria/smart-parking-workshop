@@ -8,6 +8,12 @@ pre: " <b> 5.6.1. </b> "
 
 # Step 9: Configure AWS CloudFront (CDN)
 
+> **💡 Why use Amazon CloudFront (CDN Proxy & SSL)?**  
+> - **Free HTTPS SSL Certificates**: CloudFront automatically proxies raw HTTP backend IP endpoints into encrypted HTTPS endpoints provisioned by AWS. This prevents Mixed Content security errors when modern browsers call API endpoints.  
+> - **API Acceleration & Infrastructure Security**: Routing API calls through AWS edge locations reduces request latency, provides global edge caching, and shields origin server IP addresses from direct cyber attacks and DDoS threats.
+
+---
+
 CloudFront provides free HTTPS certificates and accelerates API access for your application.
 
 AWS CloudFront automatically wraps your HTTP IP `http://18.141.13.150:8000` into a Free HTTPS endpoint provided by AWS: `https://d123456xxxx.cloudfront.net`!
